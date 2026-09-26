@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aetherion · Grok-powered Discord bot</title>
+  <meta name="description" content="Aetherion brings xAI's Grok into your Discord server: chat and vision, image, video and speech generation, a voice listener that talks back, SoundCloud in the same VC, and Aether Coin games.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta property="og:title" content="Aetherion · Grok-powered Discord bot">
+  <meta property="og:description" content="Chat, vision, image/video/audio generation, live voice, SoundCloud and Aether Coin games, powered by Grok.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+  INVITE LINK PLACEHOLDER: no Discord application (client) ID was found in the Aetherion repo.
+  Replace YOUR_CLIENT_ID (in every "Add to Discord" link on this page) with the Application ID from
+  https://discord.com/developers/applications -> Aetherion -> General Information.
+  Once you have it, a full invite looks like:
+  https://discord.com/oauth2/authorize?client_id=ID&permissions=0&scope=bot%20applications.commands
+-->
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <nav class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="36" height="36"><span>Aetherion</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#commands">Commands</a>
+        <a href="https://github.com/OniOrii/Aetherion-Grok-powered-AI" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&amp;scope=bot%20applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span> Powered by xAI Grok</span>
+        <h1>Grok, living in your <span class="grad">Discord server</span>.</h1>
+        <p class="lead">Aetherion chats and sees images, generates pictures, video and speech, joins your voice channel to talk back, plays SoundCloud on the same connection, and runs seven games on Aether Coins.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&amp;scope=bot%20applications.commands" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.5 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+            Add to Discord
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/OniOrii/Aetherion-Grok-powered-AI" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <ul class="stats">
+          <li><strong>30</strong><span>slash commands</span></li>
+          <li><strong>7</strong><span>games</span></li>
+          <li><strong>6</strong><span>Grok voices</span></li>
+          <li><strong>25</strong><span>log events</span></li>
+        </ul>
+      </div>
+
+      <!-- Mock of Aetherion's real /help embed (text taken from slash_help.py) -->
+      <div class="hero-demo" aria-label="Preview of the /help command in Discord">
+        <div class="dc-window">
+          <div class="dc-bar"><span class="hash">#</span> general</div>
+          <div class="dc-msg">
+            <div class="dc-avatar user">O</div>
+            <div class="dc-body">
+              <div class="dc-meta"><b>Ori</b><time>Today at 7:30 PM</time></div>
+              <div class="dc-slash"><span>/help</span></div>
+            </div>
+          </div>
+          <div class="dc-msg">
+            <img class="dc-avatar" src="assets/logo.svg" alt="">
+            <div class="dc-body">
+              <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+              <div class="dc-embed">
+                <div class="dc-embed-title">✦ Aetherion · Help</div>
+                <p>Grok in Discord — chat, vision, live voice, SoundCloud, and Aether Coin games.<br>Works in servers only. Mention <b>@Aetherion</b> or reply to it.</p>
+                <div class="dc-fields">
+                  <div><h4>🎙️ Talk &amp; voice</h4><p><code>/join</code> <code>/leave</code> voice chat<br><code>/play</code> <code>/pause</code> <code>/stop</code> SoundCloud</p></div>
+                  <div><h4>✦ Games &amp; coins</h4><p><code>/blackjack</code> <code>/slots</code> <code>/poker</code> <code>/trivia</code> …<br><code>/balance</code> <code>/daily</code></p></div>
+                  <div><h4>🛡️ Server</h4><p><code>/profile</code> <code>/server</code> <code>/top</code><br><code>/reactionrole</code> <code>/logs</code></p></div>
+                </div>
+                <div class="dc-footer">✦ Aetherion · pick a topic below, or run /help topic:</div>
+              </div>
+              <div class="dc-select">Overview <span>▾</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Features</span>
+          <h2>Everything Grok can do, right inside Discord</h2>
+          <p>One bot for conversation, media, voice, music, games and server management.</p>
+        </div>
+        <div class="features">
+<article class="feature f-chat"><div class="f-icon" aria-hidden="true">💬</div><h3>Chat with Grok</h3><p>Mention @Aetherion, reply to it, or talk to it directly. Answers come from xAI&#x27;s Grok via the Responses API (default model grok‑4.3).</p></article>
+<article class="feature f-chat"><div class="f-icon" aria-hidden="true">👁️</div><h3>Native vision</h3><p>Reads images from attachments, embeds, and recent reply-chain pictures, so you can ask about what&#x27;s on screen.</p></article>
+<article class="feature f-chat"><div class="f-icon" aria-hidden="true">🔎</div><h3>Live web &amp; X search</h3><p>Uses Grok&#x27;s native web_search and x_search tools when a question needs fresh information.</p></article>
+<article class="feature f-media"><div class="f-icon" aria-hidden="true">🎨</div><h3>Image generation &amp; editing</h3><p>Generates new images from a prompt or edits an existing one. Can use member avatars and top server emojis as references.</p></article>
+<article class="feature f-media"><div class="f-icon" aria-hidden="true">🎬</div><h3>Video generation</h3><p>Text-to-video and image-to-video with Grok. Can be switched on or off by the host (ENABLE_VIDEO_GENERATION).</p></article>
+<article class="feature f-media"><div class="f-icon" aria-hidden="true">🔊</div><h3>Text-to-speech</h3><p>/audio and the Read aloud menu speak text with six Grok voices (Zagan, Eve, Ara, Rex, Sal, Leo), inline tags like [laugh], and styles like whisper.</p></article>
+<article class="feature f-voice"><div class="f-icon" aria-hidden="true">🎙️</div><h3>Voice that talks back</h3><p>/join, say &quot;Aetherion&quot;, ask your question, pause. The answer plays back in the same voice channel.</p></article>
+<article class="feature f-voice"><div class="f-icon" aria-hidden="true">🎵</div><h3>SoundCloud in the same VC</h3><p>/play a title or soundcloud.com link, or just say &quot;Aetherion play …&quot;. Streams over the same voice connection with ffmpeg.</p></article>
+<article class="feature f-games"><div class="f-icon" aria-hidden="true">🪙</div><h3>Aether Coins economy</h3><p>Play-money wallets: 5,000 coins to start, a 2,000 coin /daily, a server leaderboard, and a house wallet that starts at 1,000,000.</p></article>
+<article class="feature f-games"><div class="f-icon" aria-hidden="true">🃏</div><h3>Seven casino-style games</h3><p>Blackjack, slots (three machines), coin toss, higher-or-lower, trivia, Connect Four and Texas Hold&#x27;em poker, all with drawn table art.</p></article>
+<article class="feature f-server"><div class="f-icon" aria-hidden="true">📊</div><h3>Profiles, levels &amp; ranks</h3><p>/profile member cards with a lifetime activity page, /top ranks by messages, voice time or level, and a /server snapshot.</p></article>
+<article class="feature f-server"><div class="f-icon" aria-hidden="true">🛡️</div><h3>Server toolkit</h3><p>Welcome banners, auto-role on join, 12 gradient color roles via reaction roles, a midnight date channel, 25-event logs, and /purge.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+      <div class="wrap how">
+        <div class="how-copy">
+          <span class="kicker">How it works</span>
+          <h2>Powered by <span class="grad">Grok</span></h2>
+          <p>Aetherion talks to xAI's Grok through the Responses API and leans on Grok's own abilities (long context, native vision, web and X search, image, video and speech generation) instead of piling on custom memory. Media is delivered straight to the channel, so every request gets one clean reply.</p>
+          <p>It's self-hosted: run it with Docker or on Railway using an xAI API key, or sign in with a SuperGrok / X Premium+ account through OAuth. An optional web dashboard shows health, usage and config.</p>
+        </div>
+        <ol class="steps">
+          <li><span class="num">1</span><div><h3>Mention or reply</h3><p>Aetherion activates on a mention, a reply to it, or a clearly directed message, and reads any images in the chat.</p></div></li>
+          <li><span class="num">2</span><div><h3>Say “Aetherion” in voice</h3><p>Run <code>/join</code>, say the wake word, ask, then pause. The reply plays back in the same channel.</p></div></li>
+          <li><span class="num">3</span><div><h3>Play for Aether Coins</h3><p>Claim <code>/daily</code>, then take a seat at blackjack, slots, poker and more. It's all play money.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="commands">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Commands</span>
+          <h2>Every command</h2>
+          <p>30 slash commands plus two message context menus. Click a command to copy it. <code class="arg">arg?</code> means optional.</p>
+        </div>
+        <div class="cmd-tools">
+          <label class="search">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
+            <input id="cmd-search" type="search" placeholder="Search commands…" autocomplete="off" aria-label="Search commands">
+          </label>
+          <div class="chips" role="group" aria-label="Filter by category"><button class="chip active" data-filter="all" type="button">All</button><button class="chip" data-filter="chat" type="button">Chat &amp; voice</button><button class="chip" data-filter="music" type="button">Music</button><button class="chip" data-filter="games" type="button">Games</button><button class="chip" data-filter="coins" type="button">Aether Coins</button><button class="chip" data-filter="community" type="button">Profiles &amp; stats</button><button class="chip" data-filter="admin" type="button">Server setup</button><button class="chip" data-filter="owner" type="button">Owner only</button></div>
+        </div>
+        <div id="cmd-list">
+<section class="cmd-group" data-group="chat"><h3><span aria-hidden="true">🎙️</span> Chat &amp; voice <small>6</small></h3><div class="cmd-grid"><article class="cmd" data-cat="chat" data-search="/help how aetherion works, and every command. topic jump straight to a help page (overview, chat, voice &amp; music, games, aether coins, server tools)">
+  <header><button class="cmd-name" type="button" data-copy="/help" title="Copy">/help</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>How Aetherion works, and every command.</p><ul class="args"><li><code class="arg">topic?</code><span>Jump straight to a help page (Overview, Chat, Voice &amp; music, Games, Aether Coins, Server tools)</span></li></ul>
+</article>
+<article class="cmd" data-cat="chat" data-search="/audio speak text here. tags: [pause] [laugh] [sigh]. optional style, or reply. text text to speak. inline: [pause], [laugh], [sigh], [breath], [chuckle], [long-pause], etc. voice grok voice: zagan (default), eve, ara, rex, sal, leo style optional wrapping style: whisper, soft, loud, slow, fast, singing…">
+  <header><button class="cmd-name" type="button" data-copy="/audio" title="Copy">/audio</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Speak text here. Tags: [pause] [laugh] [sigh]. Optional style, or reply.</p><ul class="args"><li><code class="arg">text?</code><span>Text to speak. Inline: [pause], [laugh], [sigh], [breath], [chuckle], [long-pause], etc.</span></li><li><code class="arg">voice?</code><span>Grok voice: Zagan (default), Eve, Ara, Rex, Sal, Leo</span></li><li><code class="arg">style?</code><span>Optional wrapping style: whisper, soft, loud, slow, fast, singing…</span></li></ul>
+</article>
+<article class="cmd" data-cat="chat" data-search="read aloud message context menu (right-click → apps). reads a message out loud with grok tts.">
+  <header><button class="cmd-name" type="button" title="Right-click a message → Apps">Read aloud</button><span class="badges"><span class="badge b-menu">Context menu</span><span class="badge b-any">Anyone</span></span></header>
+  <p>Message context menu (right-click → Apps). Reads a message out loud with Grok TTS.</p>
+</article>
+<article class="cmd" data-cat="chat" data-search="/join join your current voice channel.">
+  <header><button class="cmd-name" type="button" data-copy="/join" title="Copy">/join</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Join your current voice channel.</p>
+</article>
+<article class="cmd" data-cat="chat" data-search="/leave leave the voice channel.">
+  <header><button class="cmd-name" type="button" data-copy="/leave" title="Copy">/leave</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Leave the voice channel.</p>
+</article>
+<article class="cmd" data-cat="chat" data-search="/ping aetherion latency and connection status.">
+  <header><button class="cmd-name" type="button" data-copy="/ping" title="Copy">/ping</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Aetherion latency and connection status.</p>
+</article></div></section>
+<section class="cmd-group" data-group="music"><h3><span aria-hidden="true">🎵</span> Music <small>3</small></h3><div class="cmd-grid"><article class="cmd" data-cat="music" data-search="/play play a song in your voice channel. query song name or a soundcloud link">
+  <header><button class="cmd-name" type="button" data-copy="/play" title="Copy">/play</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Play a song in your voice channel.</p><ul class="args"><li><code class="arg req">query</code><span>Song name or a SoundCloud link</span></li></ul>
+</article>
+<article class="cmd" data-cat="music" data-search="/pause pause or resume the current song.">
+  <header><button class="cmd-name" type="button" data-copy="/pause" title="Copy">/pause</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Pause or resume the current song.</p>
+</article>
+<article class="cmd" data-cat="music" data-search="/stop stop the current song.">
+  <header><button class="cmd-name" type="button" data-copy="/stop" title="Copy">/stop</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Stop the current song.</p>
+</article></div></section>
+<section class="cmd-group" data-group="games"><h3><span aria-hidden="true">🎲</span> Games <small>7</small></h3><div class="cmd-grid"><article class="cmd" data-cat="games" data-search="/blackjack play blackjack against aetherion for aether coins. bet wager in aether coins (10–1,000, default 10)">
+  <header><button class="cmd-name" type="button" data-copy="/blackjack" title="Copy">/blackjack</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Play blackjack against Aetherion for Aether Coins.</p><ul class="args"><li><code class="arg">bet?</code><span>Wager in Aether Coins (10–1,000, default 10)</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/slots spin aetherion slots for aether coins. bet wager in aether coins (100–10,000) machine which cabinet to sit at: cosmos wheel, nebula, event horizon">
+  <header><button class="cmd-name" type="button" data-copy="/slots" title="Copy">/slots</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Spin Aetherion slots for Aether Coins.</p><ul class="args"><li><code class="arg">bet?</code><span>Wager in Aether Coins (100–10,000)</span></li><li><code class="arg">machine?</code><span>Which cabinet to sit at: Cosmos Wheel, Nebula, Event Horizon</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/cointoss flip an aether coin for aether coins. bet wager in aether coins (10–10,000) side call heads or tails">
+  <header><button class="cmd-name" type="button" data-copy="/cointoss" title="Copy">/cointoss</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Flip an Aether coin for Aether Coins.</p><ul class="args"><li><code class="arg">bet?</code><span>Wager in Aether Coins (10–10,000)</span></li><li><code class="arg">side?</code><span>Call heads or tails</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/highlow higher or lower. odds follow the card. cash out or climb. bet wager in aether coins (10–10,000)">
+  <header><button class="cmd-name" type="button" data-copy="/highlow" title="Copy">/highlow</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Higher or Lower. Odds follow the card. Cash out or climb.</p><ul class="args"><li><code class="arg">bet?</code><span>Wager in Aether Coins (10–10,000)</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/trivia easy general knowledge. four answers. pays 3x. bet wager in aether coins (10–10,000)">
+  <header><button class="cmd-name" type="button" data-copy="/trivia" title="Copy">/trivia</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Easy general knowledge. Four answers. Pays 3x.</p><ul class="args"><li><code class="arg">bet?</code><span>Wager in Aether Coins (10–10,000)</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/connect4 connect four versus aetherion or a member, for aether coins. opponent leave empty to play aetherion. mention someone to challenge them. bet stake in aether coins (10–1,000)">
+  <header><button class="cmd-name" type="button" data-copy="/connect4" title="Copy">/connect4</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Connect Four versus Aetherion or a member, for Aether Coins.</p><ul class="args"><li><code class="arg">opponent?</code><span>Leave empty to play Aetherion. Mention someone to challenge them.</span></li><li><code class="arg">bet?</code><span>Stake in Aether Coins (10–1,000)</span></li></ul>
+</article>
+<article class="cmd" data-cat="games" data-search="/poker texas hold&#x27;em. two to four seats. friends and/or aetherion. bet buy-in the host sets for every seat (10–10,000, tens). default 200. vs_aetherion seat aetherion now. friends can still join.">
+  <header><button class="cmd-name" type="button" data-copy="/poker" title="Copy">/poker</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Texas Hold&#x27;em. Two to four seats. Friends and/or Aetherion.</p><ul class="args"><li><code class="arg">bet?</code><span>Buy-in the host sets for every seat (10–10,000, tens). Default 200.</span></li><li><code class="arg">vs_aetherion?</code><span>Seat Aetherion now. Friends can still join.</span></li></ul>
+</article></div></section>
+<section class="cmd-group" data-group="coins"><h3><span aria-hidden="true">🪙</span> Aether Coins <small>3</small></h3><div class="cmd-grid"><article class="cmd" data-cat="coins" data-search="/balance see your aether coin wallet.">
+  <header><button class="cmd-name" type="button" data-copy="/balance" title="Copy">/balance</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>See your Aether Coin wallet.</p>
+</article>
+<article class="cmd" data-cat="coins" data-search="/daily claim today&#x27;s aether coins.">
+  <header><button class="cmd-name" type="button" data-copy="/daily" title="Copy">/daily</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Claim today&#x27;s Aether Coins.</p>
+</article>
+<article class="cmd" data-cat="coins" data-search="/leaderboard aether coin standings on this server.">
+  <header><button class="cmd-name" type="button" data-copy="/leaderboard" title="Copy">/leaderboard</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Aether Coin standings on this server.</p>
+</article></div></section>
+<section class="cmd-group" data-group="community"><h3><span aria-hidden="true">📊</span> Profiles &amp; stats <small>3</small></h3><div class="cmd-grid"><article class="cmd" data-cat="community" data-search="/profile show a member&#x27;s discord facts and aether coin wallet. member who to look up. leave empty for yourself.">
+  <header><button class="cmd-name" type="button" data-copy="/profile" title="Copy">/profile</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Show a member&#x27;s Discord facts and Aether Coin wallet.</p><ul class="args"><li><code class="arg">member?</code><span>Who to look up. Leave empty for yourself.</span></li></ul>
+</article>
+<article class="cmd" data-cat="community" data-search="/server show this server&#x27;s stats and aetherion setup.">
+  <header><button class="cmd-name" type="button" data-copy="/server" title="Copy">/server</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Show this server&#x27;s stats and Aetherion setup.</p>
+</article>
+<article class="cmd" data-cat="community" data-search="/top activity ranks on this server. messages, voice, or level. sort how to rank people: messages, voice time, level">
+  <header><button class="cmd-name" type="button" data-copy="/top" title="Copy">/top</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Activity ranks on this server. Messages, voice, or level.</p><ul class="args"><li><code class="arg">sort?</code><span>How to rank people: Messages, Voice time, Level</span></li></ul>
+</article></div></section>
+<section class="cmd-group" data-group="admin"><h3><span aria-hidden="true">🛡️</span> Server setup <small>10</small></h3><div class="cmd-grid"><article class="cmd" data-cat="admin" data-search="/welcome set the channel for welcome banners. administrators only. channel channel where new-member welcomes should post">
+  <header><button class="cmd-name" type="button" data-copy="/welcome" title="Copy">/welcome</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Set the channel for welcome banners. Administrators only.</p><ul class="args"><li><code class="arg req">channel</code><span>Channel where new-member welcomes should post</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/autorole give a role to people as soon as they join. administrators only. role role new members receive on join off turn auto-role off for this server">
+  <header><button class="cmd-name" type="button" data-copy="/autorole" title="Copy">/autorole</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Give a role to people as soon as they join. Administrators only.</p><ul class="args"><li><code class="arg">role?</code><span>Role new members receive on join</span></li><li><code class="arg">off?</code><span>Turn auto-role off for this server</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/datechannel set the voice channel that shows today&#x27;s date. administrators only. channel voice channel to rename each night at midnight eastern">
+  <header><button class="cmd-name" type="button" data-copy="/datechannel" title="Copy">/datechannel</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Set the voice channel that shows today&#x27;s date. Administrators only.</p><ul class="args"><li><code class="arg req">channel</code><span>Voice channel to rename each night at midnight Eastern</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/logs set the server log channel and pick which events aetherion posts. channel channel that receives log embeds event one event to turn on or off enabled on or off for that event">
+  <header><button class="cmd-name" type="button" data-copy="/logs" title="Copy">/logs</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Set the server log channel and pick which events Aetherion posts.</p><ul class="args"><li><code class="arg">channel?</code><span>Channel that receives log embeds</span></li><li><code class="arg">event?</code><span>One event to turn on or off</span></li><li><code class="arg">enabled?</code><span>On or off for that event</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/purge delete up to 100 recent messages in this channel. administrators only. amount how many messages to delete (1-100)">
+  <header><button class="cmd-name" type="button" data-copy="/purge" title="Copy">/purge</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Delete up to 100 recent messages in this channel. Administrators only.</p><ul class="args"><li><code class="arg">amount?</code><span>How many messages to delete (1-100)</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/reactionrole post post a reaction-role message in this channel. text text on the message people will react to">
+  <header><button class="cmd-name" type="button" data-copy="/reactionrole post" title="Copy">/reactionrole post</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Post a reaction-role message in this channel.</p><ul class="args"><li><code class="arg">text?</code><span>Text on the message people will react to</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/reactionrole add tie an emoji on a message to a role. emoji emoji people should click role role they get message message id or link. leave empty to use the last posted panel.">
+  <header><button class="cmd-name" type="button" data-copy="/reactionrole add" title="Copy">/reactionrole add</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Tie an emoji on a message to a role.</p><ul class="args"><li><code class="arg req">emoji</code><span>Emoji people should click</span></li><li><code class="arg req">role</code><span>Role they get</span></li><li><code class="arg">message?</code><span>Message ID or link. Leave empty to use the last posted panel.</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/reactionrole remove stop an emoji from giving a role. emoji emoji to unlink message message id or link. leave empty to use the last posted panel.">
+  <header><button class="cmd-name" type="button" data-copy="/reactionrole remove" title="Copy">/reactionrole remove</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Stop an emoji from giving a role.</p><ul class="args"><li><code class="arg req">emoji</code><span>Emoji to unlink</span></li><li><code class="arg">message?</code><span>Message ID or link. Leave empty to use the last posted panel.</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/reactionrole list show reaction roles on this server.">
+  <header><button class="cmd-name" type="button" data-copy="/reactionrole list" title="Copy">/reactionrole list</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Show reaction roles on this server.</p>
+</article>
+<article class="cmd" data-cat="admin" data-search="/reactionrole colors create the gradient color roles and post the reaction panel here.">
+  <header><button class="cmd-name" type="button" data-copy="/reactionrole colors" title="Copy">/reactionrole colors</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Create the gradient color roles and post the reaction panel here.</p>
+</article></div></section>
+<section class="cmd-group" data-group="owner"><h3><span aria-hidden="true">👑</span> Owner only <small>4</small></h3><div class="cmd-grid"><article class="cmd" data-cat="owner" data-search="/givecoins ori only: grant aether coins to a member. member who receives the coins amount how many coins (10–10,000)">
+  <header><button class="cmd-name" type="button" data-copy="/givecoins" title="Copy">/givecoins</button><span class="badges"><span class="badge b-owner">Owner</span></span></header>
+  <p>Ori only: grant Aether Coins to a member.</p><ul class="args"><li><code class="arg req">member</code><span>Who receives the coins</span></li><li><code class="arg req">amount</code><span>How many coins (10–10,000)</span></li></ul>
+</article>
+<article class="cmd" data-cat="owner" data-search="/edit ori only. edit text aetherion already posted. message message link or id of the aetherion message text replacement text. leave empty to open an editor with the current text.">
+  <header><button class="cmd-name" type="button" data-copy="/edit" title="Copy">/edit</button><span class="badges"><span class="badge b-owner">Owner</span></span></header>
+  <p>Ori only. Edit text Aetherion already posted.</p><ul class="args"><li><code class="arg req">message</code><span>Message link or ID of the Aetherion message</span></li><li><code class="arg">text?</code><span>Replacement text. Leave empty to open an editor with the current text.</span></li></ul>
+</article>
+<article class="cmd" data-cat="owner" data-search="edit aetherion text message context menu. ori only: edit text aetherion already posted.">
+  <header><button class="cmd-name" type="button" title="Right-click a message → Apps">Edit Aetherion text</button><span class="badges"><span class="badge b-menu">Context menu</span><span class="badge b-owner">Owner</span></span></header>
+  <p>Message context menu. Ori only: edit text Aetherion already posted.</p>
+</article>
+<article class="cmd" data-cat="owner" data-search="/status set or rotate aetherion&#x27;s status bubble. ori only. text status text. leave empty to see the current status or to resume rotation. kind how the status is shown: custom bubble, watching, playing, listening, competing rotate on = cycle the default bubbles. off = pin this text.">
+  <header><button class="cmd-name" type="button" data-copy="/status" title="Copy">/status</button><span class="badges"><span class="badge b-owner">Owner</span></span></header>
+  <p>Set or rotate Aetherion&#x27;s status bubble. Ori only.</p><ul class="args"><li><code class="arg">text?</code><span>Status text. Leave empty to see the current status or to resume rotation.</span></li><li><code class="arg">kind?</code><span>How the status is shown: Custom bubble, Watching, Playing, Listening, Competing</span></li><li><code class="arg">rotate?</code><span>On = cycle the default bubbles. Off = pin this text.</span></li></ul>
+</article></div></section>
+        </div>
+        <p class="empty" id="cmd-empty" hidden>No commands match that search.</p>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="wrap">
+        <div class="final-cta">
+          <img src="assets/logo.svg" alt="" width="72" height="72">
+          <h2>Bring Aetherion to your server</h2>
+          <p>Invite the bot, or clone the repo and host your own copy.</p>
+          <div class="cta center">
+            <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&amp;scope=bot%20applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+            <a class="btn btn-ghost" href="https://github.com/OniOrii/Aetherion-Grok-powered-AI" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="30" height="30"><span>Aetherion</span></a>
+        <p>Grok-powered Discord bot, built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/OniOrii/Aetherion-Grok-powered-AI" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="https://github.com/OniOrii/Aetherion-Grok-powered-AI#readme" target="_blank" rel="noopener">Setup guide</a>
+        <a href="https://github.com/OniOrii/Aetherion-Grok-powered-AI/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>
+        <a href="#commands">Commands</a>
+      </div>
+    </div>
+    <div class="wrap footer-note">Not affiliated with Discord or xAI. Grok models and APIs by xAI. Aether Coins are play money with no real-world value.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

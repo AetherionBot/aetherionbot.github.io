@@ -2,7 +2,7 @@
 
 Static landing page for the Aetherion Discord bot. Plain HTML/CSS/JS with no build step.
 
-- `index.html`: the page. Commands and features come from the bot's source (`src/groksito_discord/discord/*.py`).
+- `index.html`: the page. Commands and features come from the bot's source.
 - `styles.css`, `script.js`: styling plus command search, filter and click-to-copy.
 - `assets/logo.svg`, `assets/favicon.svg`: placeholder logo (the repo has no bot avatar).
 

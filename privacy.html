@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Aetherion</title>
+  <meta name="description" content="What the Aetherion Discord bot collects, why, where it is stored, who it is shared with, how long it is kept, and how to get it deleted.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta property="og:title" content="Privacy Policy · Aetherion">
+  <meta property="og:description" content="What the Aetherion Discord bot collects, why, and how to get it deleted.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <nav class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#commands">Commands</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </div>
+      <a class="btn btn-primary btn-sm" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message to Add</a>
+    </div>
+  </nav>
+
+  <main class="legal">
+    <div class="legal-wrap">
+      <header class="legal-head">
+        <span class="kicker">Legal</span>
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective September 26, 2026</p>
+        <p>This policy explains what the Aetherion Discord bot (“Aetherion”, “the bot”) collects, why, where it is kept, who it is shared with, and how to get it deleted. Aetherion is run by Ori, an individual developer (“I”, “me”). You can reach me through my <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Discord profile</a>. Also see the <a href="terms.html">Terms of Service</a>.</p>
+      </header>
+
+      <div class="legal-summary">
+        <h2>The short version</h2>
+        <ul>
+          <li>Aetherion reads messages in the channels it can see so it can reply and follow the conversation. It keeps the most recent 150 messages per channel (the first 280 characters of each), and older ones drop off as new messages arrive.</li>
+          <li>When you talk to Aetherion, send it a voice message, or speak to it in a voice channel, your words, images and audio are sent to xAI (the company behind Grok) to produce the answer.</li>
+          <li>Aether Coin wallets, activity stats (message counts, voice time, XP) and server settings are kept until they are deleted.</li>
+          <li>Aetherion does not record or save voice audio.</li>
+          <li>I don’t sell your data, use it for advertising, or train AI models on it.</li>
+          <li>There is no self-serve delete command yet. Message me on Discord and I will delete your data.</li>
+        </ul>
+      </div>
+
+      <nav class="legal-toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <ol>
+          <li><a href="#collect">What Aetherion collects</a></li>
+          <li><a href="#use">How it is used</a></li>
+          <li><a href="#storage">Where it is stored</a></li>
+          <li><a href="#third-parties">Third parties</a></li>
+          <li><a href="#retention">How long it is kept</a></li>
+          <li><a href="#deletion">Your choices and deletion</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#website">This website</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+
+      <section id="collect">
+        <h2>1. What Aetherion collects</h2>
+        <p>Aetherion only works inside Discord servers. It does not ask for passwords, email addresses or payment details, and it has no login.</p>
+
+        <h3>Messages in channels it can see</h3>
+        <p>Aetherion uses Discord’s message content access. In servers where it is active, for each message posted in a channel it can read (whether or not the message is for Aetherion) it keeps a short record: your Discord user ID and display name, the first 280 characters of the text, links in the message, links to attached or embedded images, and the time. It keeps its own replies the same way. This short-term history lets it follow a conversation and answer questions like “what were we just talking about?”. When asked about recent conversation, it may also save a short summary of the channel (up to 600 characters).</p>
+
+        <h3>When you talk to Aetherion</h3>
+        <p>When you mention Aetherion, reply to it, or address it by name, it gathers what it needs to answer: your message and display name, images you attach or point to, the text of small text-file attachments, the message you are replying to and earlier messages in that reply chain (which may be written by other people), and a few recent lines between you and the bot in that channel. This is sent to xAI to generate the reply (see <a href="#third-parties">Third parties</a>).</p>
+
+        <h3>Voice messages and audio files</h3>
+        <p>If you post a Discord voice message or an audio file in a channel Aetherion can see, it automatically downloads the clip, sends it to xAI to be transcribed, and posts a reply that quotes the transcript, with a spoken version. The clip itself is not saved by Aetherion.</p>
+
+        <h3>Voice channels</h3>
+        <p>When someone runs <code>/join</code> or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription. Aetherion only answers when the transcript contains its name. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
+
+        <h3>Image, video and speech generation</h3>
+        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the daily generation limit, it counts how many generations each server has used today.</p>
+
+        <h3>Aether Coins and games</h3>
+        <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed <code>/daily</code>, and when your wallet was created. Game rounds themselves are held in memory only.</p>
+
+        <h3>Activity, levels and ranks</h3>
+        <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and your XP and level, plus the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
+
+        <h3>Server settings</h3>
+        <p>Settings that server administrators choose (welcome channel, auto-role, reaction roles, date channel, and log channel and events), plus a list of the servers Aetherion is in (ID, name and member count) for my status view. Aetherion also counts how often each custom server emoji is used and stores a short AI-written description of it.</p>
+
+        <h3>Welcome banners</h3>
+        <p>If a server turns on welcome banners, a new member’s profile picture is sent to xAI to describe it and create a matching background, and their display name is drawn on the banner. The banner is posted in the server’s welcome channel and not stored by Aetherion.</p>
+
+        <h3>Server logs</h3>
+        <p>If administrators turn on <code>/logs</code>, Aetherion posts events to the channel they pick: joins and leaves, kicks, bans, timeouts, nickname, role and avatar changes, voice channel joins, moves and mute changes, posted invite links, message edits and deletions (including the earlier text when Discord still has it), and channel, role, emoji and server changes. These entries live in that Discord channel. Aetherion only stores the log settings.</p>
+
+        <h3>Service logs</h3>
+        <p>Like most software, the bot writes operational logs for debugging. These can include user and server IDs, display names, voice transcripts and spoken replies (the first 200 characters), music search terms, short excerpts of image prompts that xAI rejected, and error details. In voice channels, transcripts of speech that did not include the bot’s name can also appear in these logs.</p>
+      </section>
+
+      <section id="use">
+        <h2>2. How it is used</h2>
+        <ul>
+          <li>To run Aetherion’s features: replies, vision, voice, music, media generation, games, profiles, ranks and server tools.</li>
+          <li>To enforce rate limits and daily generation limits and to keep games fair.</li>
+          <li>To find and fix bugs and keep the service running.</li>
+        </ul>
+        <p>Your data is not sold, rented, used for advertising, or used by me to train AI models.</p>
+      </section>
+
+      <section id="storage">
+        <h2>3. Where it is stored</h2>
+        <p>Aetherion runs on <a href="https://railway.com" target="_blank" rel="noopener">Railway</a>, a hosting provider, on servers in the United States. Stored data (message history, wallets, activity stats and settings) sits on the bot’s persistent storage there, and service logs are kept by Railway. If you use Aetherion from outside the United States, your data is processed in the United States.</p>
+      </section>
+
+      <section id="third-parties">
+        <h2>4. Third parties</h2>
+        <ul>
+          <li><strong>Discord.</strong> Everything you do with Aetherion happens on Discord, which handles your data under the <a href="https://discord.com/privacy" target="_blank" rel="noopener">Discord Privacy Policy</a>.</li>
+          <li><strong>xAI (Grok).</strong> Message text, images, text-file contents, voice audio, prompts and profile pictures described above are sent to xAI’s API to create replies, transcriptions, speech, images and videos. Grok may also run web and X searches to answer. xAI processes and may retain this data under its own terms and the <a href="https://x.ai/legal/privacy-policy" target="_blank" rel="noopener">xAI Privacy Policy</a>.</li>
+          <li><strong>SoundCloud.</strong> When you use <code>/play</code> or ask for a song by voice, the song name or link is looked up on SoundCloud and the audio is streamed from there. Your identity is not sent. See the <a href="https://soundcloud.com/pages/privacy" target="_blank" rel="noopener">SoundCloud Privacy Policy</a>.</li>
+          <li><strong>Open Trivia Database.</strong> <code>/trivia</code> fetches questions from opentdb.com. No user data is sent.</li>
+          <li><strong>Railway.</strong> Hosts the bot and its storage (see above).</li>
+        </ul>
+        <p>Outside these services, data is only shared if the law requires it.</p>
+      </section>
+
+      <section id="retention">
+        <h2>5. How long it is kept</h2>
+        <div class="table-scroll">
+          <table class="legal-table">
+            <thead>
+              <tr><th scope="col">Data</th><th scope="col">How long</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Channel message history</td><td>The latest 150 messages per channel. Older ones are dropped automatically as new messages come in. There is no time limit, so in a quiet channel messages can stay until newer ones replace them. Deleting a message on Discord does not remove it from this history.</td></tr>
+              <tr><td>Channel summary</td><td>One per channel, replaced when a new one is made.</td></tr>
+              <tr><td>Voice conversation memory</td><td>Last 10 exchanges per person, in memory only. Cleared when the bot restarts.</td></tr>
+              <tr><td>Voice audio and voice messages</td><td>Not saved. Processed and discarded.</td></tr>
+              <tr><td>Aether Coin wallets</td><td>Until deleted on request or the service shuts down.</td></tr>
+              <tr><td>Activity stats (messages, voice time, XP)</td><td>Until deleted on request or the service shuts down.</td></tr>
+              <tr><td>Daily generation counter</td><td>Today only. Older days are removed.</td></tr>
+              <tr><td>Server settings and emoji data</td><td>Until changed, deleted on request, or the service shuts down. Removing Aetherion from a server does not delete them automatically.</td></tr>
+              <tr><td>Rate-limit timestamps</td><td>About a minute, in memory only.</td></tr>
+              <tr><td>Service logs</td><td>For the retention period set by the hosting provider.</td></tr>
+              <tr><td>Data sent to xAI</td><td>As set out in xAI’s policies.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="deletion">
+        <h2>6. Your choices and deletion</h2>
+        <p>There is no self-serve delete command yet. To see or delete your data, message me through my <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Discord profile</a> with your Discord user ID and what you would like removed (for example, your messages in the bot’s history, your coin wallet, or your activity stats). I will delete it and let you know when it is done. Server administrators can ask me to remove all of a server’s data the same way.</p>
+        <p>You can also limit what Aetherion sees:</p>
+        <ul>
+          <li>Don’t mention or reply to Aetherion, and don’t post voice messages or audio files in channels it can read.</li>
+          <li>Don’t use <code>/join</code> or <code>/play</code> if you don’t want your speech transcribed.</li>
+          <li>Server administrators can use Discord permissions to keep Aetherion out of specific channels, or remove it from the server.</li>
+        </ul>
+        <p>Data held by Discord or xAI has to be requested from them directly.</p>
+      </section>
+
+      <section id="children">
+        <h2>7. Children</h2>
+        <p>Discord requires users to be at least 13 years old (older in some countries), and Aetherion is meant for people who meet Discord’s minimum age. It is not directed at children under 13. If you think a child under 13 has used Aetherion, contact me and I will delete their data.</p>
+      </section>
+
+      <section id="security">
+        <h2>8. Security</h2>
+        <p>Aetherion’s data is kept on private hosting that only I can access, and secrets like API keys are kept out of the data store. No system is perfectly secure, so please don’t share sensitive personal information (such as passwords, financial details or health information) with the bot.</p>
+      </section>
+
+      <section id="website">
+        <h2>9. This website</h2>
+        <p>This site is a static page hosted on GitHub Pages. It uses no cookies, analytics or tracking. It loads fonts from Google Fonts, so GitHub and Google receive standard request information such as your IP address under their own privacy policies.</p>
+      </section>
+
+      <section id="changes">
+        <h2>10. Changes to this policy</h2>
+        <p>If Aetherion’s features or data practices change, I will update this page and the effective date above. If you keep using Aetherion after a change, the updated policy applies.</p>
+      </section>
+
+      <section id="contact">
+        <h2>11. Contact</h2>
+        <p>Questions or requests about your data: message Ori through <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Discord</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="30" height="30"><span>Aetherion</span></a>
+        <p>Grok-powered Discord bot, built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#commands">Commands</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="wrap footer-note">Not affiliated with Discord or xAI. Grok models and APIs by xAI. Aether Coins are play money with no real-world value.</div>
+  </footer>
+</body>
+</html>

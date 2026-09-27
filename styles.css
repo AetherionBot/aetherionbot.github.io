@@ -244,3 +244,39 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; letter-spacing:
 .section-cta { padding-top: 24px; }
 
 .brand img, .final-cta img { border-radius: 22%; }
+
+/* legal pages (terms.html, privacy.html) */
+.legal { padding: 64px 0 96px; }
+.legal-wrap { width: min(820px, 100% - 40px); margin-inline: auto; }
+.legal-head h1 { font-size: clamp(2.2rem, 4.6vw, 3.2rem); margin: 10px 0 6px; }
+.legal-meta { color: var(--dim); font-size: .92rem; margin: 0 0 22px; }
+.legal p, .legal li { color: var(--muted); }
+.legal strong { color: var(--text); }
+.legal a { text-decoration: underline; text-underline-offset: 2px; text-decoration-color: rgba(123, 134, 255, .45); }
+.legal a:hover { text-decoration-color: #fff; }
+.legal section { scroll-margin-top: 84px; }
+.legal h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin: 48px 0 12px; }
+.legal h3 { font-size: 1.05rem; color: #fff; margin: 26px 0 6px; }
+.legal ul, .legal ol { padding-left: 1.3em; }
+.legal li { margin-bottom: 6px; }
+.legal-summary, .legal-toc { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 26px; margin-top: 28px; }
+.legal-summary { border-color: rgba(201, 162, 39, .35); background: linear-gradient(180deg, rgba(201, 162, 39, .07), var(--panel)); }
+.legal-summary h2 { margin: 0 0 10px; font-size: 1.2rem; }
+.legal-summary ul { margin: 0; }
+.legal-toc strong { display: block; margin-bottom: 8px; }
+.legal-toc ol { margin: 0; columns: 2; column-gap: 32px; }
+.legal-toc a { text-decoration: none; color: var(--muted); }
+.legal-toc a:hover { color: #fff; }
+.table-scroll { overflow-x: auto; }
+.legal-table { width: 100%; border-collapse: collapse; font-size: .94rem; }
+.legal-table th, .legal-table td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.legal-table th { color: #fff; font-weight: 700; background: var(--panel); }
+.legal-table td { color: var(--muted); }
+.legal-table td:first-child { color: var(--text); font-weight: 600; width: 34%; }
+.nav-links a[aria-current="page"], .footer-links a[aria-current="page"] { color: #fff; }
+@media (max-width: 560px) {
+  .legal { padding: 44px 0 68px; }
+  .legal-wrap { width: calc(100% - 32px); }
+  .legal-toc ol { columns: 1; }
+  .legal-summary, .legal-toc { padding: 18px 20px; }
+}

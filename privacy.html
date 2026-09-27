@@ -44,7 +44,7 @@
       <div class="legal-summary">
         <h2>The short version</h2>
         <ul>
-          <li>Aetherion reads messages in the channels it can see so it can reply and follow the conversation. It keeps the most recent 150 messages per channel (the first 280 characters of each), and older ones drop off as new messages arrive.</li>
+          <li>Aetherion reads messages in the channels it can see so it can reply and follow the conversation. It keeps the most recent 150 messages per channel (the first 280 characters of each) for up to 3 days, then deletes them. If you delete a message on Discord, Aetherion deletes its saved copy too.</li>
           <li>When you talk to Aetherion, send it a voice message, or speak to it in a voice channel, your words, images and audio are sent to xAI (the company behind Grok) to produce the answer.</li>
           <li>Aether Coin wallets, activity stats (message counts, voice time, XP) and server settings are kept until they are deleted.</li>
           <li>Aetherion does not record or save voice audio.</li>
@@ -75,7 +75,7 @@
         <p>Aetherion only works inside Discord servers. It does not ask for passwords, email addresses or payment details, and it has no login.</p>
 
         <h3>Messages in channels it can see</h3>
-        <p>Aetherion uses Discord’s message content access. In servers where it is active, for each message posted in a channel it can read (whether or not the message is for Aetherion) it keeps a short record: your Discord user ID and display name, the first 280 characters of the text, links in the message, links to attached or embedded images, and the time. It keeps its own replies the same way. This short-term history lets it follow a conversation and answer questions like “what were we just talking about?”. When asked about recent conversation, it may also save a short summary of the channel (up to 600 characters).</p>
+        <p>Aetherion uses Discord’s message content access. In servers where it is active, for each message posted in a channel it can read (whether or not the message is for Aetherion) it keeps a short record: your Discord user ID and display name, the first 280 characters of the text, links in the message, links to attached or embedded images, and the time. It keeps its own replies the same way. This short-term history lets it follow a conversation and answer questions like “what were we just talking about?”. Each record is deleted after 3 days (sooner if the channel gets more than 150 newer messages). If a message is deleted on Discord, its saved copy is deleted too, and if it is edited, the saved copy is updated. When asked about recent conversation, it may also save a short summary of the channel (up to 600 characters).</p>
 
         <h3>When you talk to Aetherion</h3>
         <p>When you mention Aetherion, reply to it, or address it by name, it gathers what it needs to answer: your message and display name, images you attach or point to, the text of small text-file attachments, the message you are replying to and earlier messages in that reply chain (which may be written by other people), and a few recent lines between you and the bot in that channel. This is sent to xAI to generate the reply (see <a href="#third-parties">Third parties</a>).</p>
@@ -143,8 +143,8 @@
               <tr><th scope="col">Data</th><th scope="col">How long</th></tr>
             </thead>
             <tbody>
-              <tr><td>Channel message history</td><td>The latest 150 messages per channel. Older ones are dropped automatically as new messages come in. There is no time limit, so in a quiet channel messages can stay until newer ones replace them. Deleting a message on Discord does not remove it from this history.</td></tr>
-              <tr><td>Channel summary</td><td>One per channel, replaced when a new one is made.</td></tr>
+              <tr><td>Channel message history</td><td>Up to 3 days, and only the latest 150 messages per channel. Messages older than 3 days are deleted automatically, and older ones also drop off sooner as new messages come in. Deleting a message on Discord also deletes Aetherion’s saved copy. Deleting a channel or removing Aetherion from a server deletes that channel’s saved messages.</td></tr>
+              <tr><td>Channel summary</td><td>One per channel, replaced when a new one is made, and deleted after 3 days.</td></tr>
               <tr><td>Voice conversation memory</td><td>Last 10 exchanges per person, in memory only. Cleared when the bot restarts.</td></tr>
               <tr><td>Voice audio and voice messages</td><td>Not saved. Processed and discarded.</td></tr>
               <tr><td>Aether Coin wallets</td><td>Until deleted on request or the service shuts down.</td></tr>

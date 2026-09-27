@@ -242,3 +242,5 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; letter-spacing:
 }
 .cmd-group:last-child { margin-bottom: 0; }
 .section-cta { padding-top: 24px; }
+
+.brand img, .final-cta img { border-radius: 22%; }

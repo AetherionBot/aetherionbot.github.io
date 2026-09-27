@@ -278,6 +278,15 @@ h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.15; letter-spacing:
   .plan { padding: 22px; }
 }
 
+/* add-to-discord notes + setup tip */
+.cta-note { margin: 16px 0 0; color: var(--dim); font-size: .92rem; max-width: 560px; }
+.tip { margin-top: 18px; padding: 14px 18px; border-radius: 12px; background: rgba(201, 162, 39, .08); border: 1px solid rgba(201, 162, 39, .3); color: var(--muted); font-size: .94rem; }
+.tip strong { color: var(--gold-2); }
+.tip b { color: var(--text); }
+.steps h3 .badge { vertical-align: 2px; margin-left: 4px; }
+.plan-btn { margin-top: 22px; }
+.final-cta .cta-note { margin-inline: auto; }
+
 /* legal pages (terms.html, privacy.html) */
 .legal { padding: 64px 0 96px; }
 .legal-wrap { width: min(820px, 100% - 40px); margin-inline: auto; }

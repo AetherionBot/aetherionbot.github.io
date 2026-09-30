@@ -3,40 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aetherion · Grok-powered Discord bot</title>
-  <meta name="description" content="Aetherion brings xAI's Grok into your Discord server: chat and vision, image, video and speech generation, a voice listener that talks back, SoundCloud in the same VC, and Aether Coin games.">
+  <title>Aetherion: Grok-powered Discord bot for music, games and AI chat</title>
+  <meta name="description" content="Aetherion is a Grok-powered Discord bot: SoundCloud music, 7 Aether Coin games, reaction roles and server tools are free; AI chat, live voice and custom personality come with Premium ($4.99/mo per server).">
   <meta name="theme-color" content="#0b0d14">
-  <meta property="og:title" content="Aetherion · Grok-powered Discord bot">
-  <meta property="og:description" content="Chat, vision, image/video/audio generation, live voice, SoundCloud and Aether Coin games, powered by Grok.">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://aetherionbot.github.io/">
+  <meta property="og:site_name" content="Aetherion">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:url" content="https://aetherionbot.github.io/">
+  <meta property="og:title" content="Aetherion · Grok-powered Discord bot">
+  <meta property="og:description" content="Free music, games and server tools. Premium adds Grok AI chat, live voice and a custom personality for your server.">
+  <meta property="og:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aetherion · Grok-powered Discord bot">
+  <meta name="twitter:description" content="Free music, games and server tools. Premium adds Grok AI chat, live voice and a custom personality for your server.">
+  <meta name="twitter:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta name="twitter:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<!--
-  "Add to Discord" buttons use the OAuth invite (client ID 1545140271073722378, permissions 309576723664).
-  "Message me" links open the owner's Discord profile (user ID 1022200760018161684) for questions and Premium codes.
--->
+<a class="skip-link" href="#main">Skip to content</a>
   <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
 
-  <nav class="nav" id="top">
+  <nav class="nav" id="top" aria-label="Main">
     <div class="wrap nav-inner">
       <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
-        <a href="#premium">Premium</a>
         <a href="#commands">Commands</a>
+        <a href="premium.html">Premium</a>
+        <a href="faq.html">FAQ</a>
       </div>
-      <a class="btn btn-primary btn-sm" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+      <a class="btn btn-primary btn-sm nav-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+        <div class="nav-panel">
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="#commands">Commands</a>
+          <a href="premium.html">Premium</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support</a>
+        </div>
+      </details>
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero" id="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
         <span class="eyebrow"><span class="dot"></span> Powered by xAI Grok</span>
@@ -49,7 +77,7 @@
           </a>
           <a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Questions? Message me</a>
         </div>
-        <p class="cta-note">Free to add: music, games and server tools work right away. <a href="#premium">Premium</a> ($4.99/mo) unlocks the Grok AI features with a code.</p>
+        <p class="cta-note">Free to add: music, games and server tools work right away. <a href="premium.html">Premium</a> ($4.99/mo per server) unlocks the Grok AI features with a code.</p>
         <ul class="stats">
           <li><strong>21</strong><span>slash commands</span></li>
           <li><strong>7</strong><span>games</span></li>
@@ -59,7 +87,7 @@
       </div>
 
       <!-- Mock of Aetherion's real /help embed (text taken from slash_help.py) -->
-      <div class="hero-demo" aria-label="Preview of the /help command in Discord">
+      <figure class="hero-demo" aria-label="Illustration of the /help command in Discord" style="margin:0">
         <div class="dc-window">
           <div class="dc-bar"><span class="hash">#</span> general</div>
           <div class="dc-msg">
@@ -70,7 +98,7 @@
             </div>
           </div>
           <div class="dc-msg">
-            <img class="dc-avatar" src="assets/logo.png" alt="">
+            <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
             <div class="dc-body">
               <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
               <div class="dc-embed">
@@ -87,19 +115,197 @@
             </div>
           </div>
         </div>
-      </div>
+        <figcaption class="hero-cap">Illustration of how it looks in Discord</figcaption>
+      </figure>
     </div>
   </header>
 
-  <main>
+  <main id="main">
+    <section class="section section-tight" id="preview">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">See it in action</span>
+          <h2>What Aetherion looks like in your server</h2>
+          <p>Music with buttons, games on Aether Coins, welcome banners and a server-only persona. The text below is taken from the bot's real replies.</p>
+        </div>
+        <p class="illus-note"><span>✦ These are illustrations drawn with HTML and CSS, not live screenshots.</span></p>
+        <div class="showcase">
+          <div class="showcase-col">
+<figure class="mock reveal" aria-label="Illustration of a blackjack hand with Hit, Stand and Double buttons">
+  <div class="mock-tag"><span>🃏 Blackjack</span> <span class="badge b-any">Free</span></div>
+  <div class="dc-window">
+    <div class="dc-bar"><span class="hash">#</span> casino</div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Mira</span> used <span class="dc-used-cmd">/blackjack</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <div class="dc-embed">
+          <div class="dc-embed-title">✦ Blackjack</div>
+          <div class="table-art" role="img" aria-label="Blackjack table: you hold king of hearts and eight of spades; the dealer shows ten of diamonds and one face-down card">
+            <div class="hand"><small>Aetherion</small><div class="cards"><span class="pcard red"><b>10</b><i>♦</i></span><span class="pcard back"></span></div></div>
+            <div class="hand"><small>You</small><div class="cards"><span class="pcard red"><b>K</b><i>♥</i></span><span class="pcard"><b>8</b><i>♠</i></span></div></div>
+          </div>
+          <div class="dc-fields dc-fields-4">
+            <div><h4>♥ You</h4><p>18</p></div>
+            <div><h4>✦ Aetherion</h4><p>10+</p></div>
+            <div><h4>Bet</h4><p><b>✦ 100</b></p></div>
+            <div><h4>Wallet</h4><p><b>✦ 4,900</b></p></div>
+          </div>
+          <div class="dc-footer">Hit, stand, or double. Only you can press the buttons.</div>
+        </div>
+        <div class="dc-buttons">
+          <span class="dc-btn dc-btn-primary">Hit</span>
+          <span class="dc-btn dc-btn-secondary">Stand</span>
+          <span class="dc-btn dc-btn-success">Double</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Illustration of how it looks in Discord</figcaption>
+</figure>
+<figure class="mock reveal" aria-label="Illustration of the /play now-playing panel with Pause and Stop buttons">
+  <div class="mock-tag"><span>🎵 Music</span> <span class="badge b-any">Free</span></div>
+  <div class="dc-window">
+    <div class="dc-bar"><span class="hash">#</span> music</div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Mira</span> used <span class="dc-used-cmd">/play</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <div class="dc-embed">
+          <div class="dc-embed-author"><img src="assets/logo.png" alt="" width="20" height="20"> Aetherion</div>
+          <div class="dc-embed-row">
+            <div>
+              <div class="dc-embed-title">✦ Now playing</div>
+              <p><b>Lo-fi Study Beats (Night Mix)</b></p>
+            </div>
+            <img class="dc-thumb" src="assets/logo.png" alt="" width="64" height="64">
+          </div>
+          <div class="dc-footer">✦ Aetherion · SoundCloud · buttons work for anyone in my voice channel</div>
+        </div>
+        <div class="dc-buttons">
+          <span class="dc-btn dc-btn-secondary"><span aria-hidden="true">⏸️</span> Pause</span>
+          <span class="dc-btn dc-btn-danger"><span aria-hidden="true">⏹️</span> Stop</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Illustration of how it looks in Discord</figcaption>
+</figure>
+          </div>
+          <div class="showcase-col">
+<figure class="mock reveal" aria-label="Illustration of the /coins daily and /coins balance embeds">
+  <div class="mock-tag"><span>🪙 Aether Coins</span> <span class="badge b-any">Free</span></div>
+  <div class="dc-window">
+    <div class="dc-bar"><span class="hash">#</span> casino</div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Mira</span> used <span class="dc-used-cmd">/coins daily</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <div class="dc-embed win">
+          <div class="dc-embed-title">✦ Daily claimed</div>
+          <p>Claimed ✦ <b>2,000</b>.<br>Wallet: ✦ <b>7,000</b>.</p>
+          <div class="dc-footer">One drip per Eastern day.</div>
+        </div>
+        <div class="dc-eph">👁 Only you can see this</div>
+      </div>
+    </div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Mira</span> used <span class="dc-used-cmd">/coins balance</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <div class="dc-embed">
+          <div class="dc-embed-title">✦ Wallet</div>
+          <p>You have ✦ <b>7,000</b>.</p>
+          <div class="dc-footer">New players start at 5,000 Aether Coins.</div>
+        </div>
+        <div class="dc-eph">👁 Only you can see this</div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Illustration of how it looks in Discord</figcaption>
+</figure>
+<figure class="mock reveal" aria-label="Illustration of a welcome message with an AI welcome banner">
+  <div class="mock-tag"><span>👋 Welcome banner</span> <span class="badge b-premium">Premium</span></div>
+  <div class="dc-window">
+    <div class="dc-bar"><span class="hash">#</span> welcome</div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <p class="dc-text">Welcome <span class="dc-mention">@Kai</span> to <b>Starlight Lounge</b>! You are the 128th member!</p>
+        <div class="banner" role="img" aria-label="Example welcome banner: a round avatar above the word Welcome and the member name Kai, on a starry background">
+          <span class="banner-av">K</span>
+          <span class="banner-title">Welcome</span>
+          <span class="banner-name">Kai</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Illustration of how it looks in Discord</figcaption>
+</figure>
+          </div>
+        </div>
+        <div class="showcase showcase-last">
+<figure class="mock reveal" aria-label="Illustration of the /customize command renaming the bot to Nova with a pirate personality">
+  <div class="mock-tag"><span>🪄 /customize</span> <span class="badge b-premium">Premium</span></div>
+  <div class="dc-window">
+    <div class="dc-bar"><span class="hash">#</span> general</div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Ori</span> used <span class="dc-used-cmd">/customize name</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <p class="dc-text">✨ In this server I'm now <b>Nova</b>. Say "Nova" (or Aetherion) to get my attention.</p>
+        <div class="dc-eph">👁 Only you can see this</div>
+      </div>
+    </div>
+    <div class="dc-msg">
+      <img class="dc-avatar" src="assets/logo.png" alt="" width="40" height="40">
+      <div class="dc-body">
+        <div class="dc-used"><span class="dc-used-user">Ori</span> used <span class="dc-used-cmd">/customize personality</span></div>
+        <div class="dc-meta"><b class="bot-name">Aetherion</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <p class="dc-text">✨ Personality saved for this server. It changes my tone and style here, not my core rules.</p>
+        <div class="dc-eph">👁 Only you can see this</div>
+      </div>
+    </div>
+    <div class="dc-divider"><span>Later, in chat</span></div>
+    <div class="dc-msg">
+      <span class="dc-avatar nova" aria-hidden="true">N</span>
+      <div class="dc-body">
+        <div class="dc-meta"><b class="bot-name">Nova</b><span class="dc-tag">APP</span><time>Today at 7:30 PM</time></div>
+        <p class="dc-text">Ahoy, Mira! Ask away, and I'll keep the puns <i>shipshape</i>.</p>
+      </div>
+    </div>
+  </div>
+  <figcaption>Illustration of how it looks in Discord</figcaption>
+</figure>
+          <aside class="make-yours reveal" data-d="1">
+            <span class="badge b-premium">Premium</span>
+            <h3>Make it yours with <code>/customize</code></h3>
+            <p>Give Aetherion its own name, a personality of up to 500 characters, and a profile picture that only shows in your server. The custom name also works as a wake word.</p>
+            <ul>
+              <li><code>/customize name</code> needs Change Nickname</li>
+              <li><code>/customize personality</code> changes tone, not core rules</li>
+              <li><code>/customize avatar</code> is per-server only</li>
+            </ul>
+            <a class="btn btn-ghost btn-sm" href="premium.html">See what Premium includes</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="features">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="kicker">Features</span>
           <h2>Everything Grok can do, right inside Discord</h2>
           <p>One bot for conversation, media, voice, music, games and server management.</p>
         </div>
-        <div class="features">
+        <div class="features reveal">
 <article class="feature f-chat"><div class="f-icon" aria-hidden="true">💬</div><h3>Chat with Grok</h3><p>Mention @Aetherion, reply to it, or talk to it directly. Answers come from xAI&#x27;s Grok via the Responses API (default model grok‑4.3).</p></article>
 <article class="feature f-chat"><div class="f-icon" aria-hidden="true">👁️</div><h3>Native vision</h3><p>Reads images from attachments, embeds, and recent reply-chain pictures, so you can ask about what&#x27;s on screen.</p></article>
 <article class="feature f-chat"><div class="f-icon" aria-hidden="true">🔎</div><h3>Live web &amp; X search</h3><p>Uses Grok&#x27;s native web_search and x_search tools when a question needs fresh information.</p></article>
@@ -118,14 +324,14 @@
 
     <section class="section section-alt" id="how">
       <div class="wrap how">
-        <div class="how-copy">
+        <div class="how-copy reveal">
           <span class="kicker">How it works</span>
           <h2>Powered by <span class="grad">Grok</span></h2>
           <p>Aetherion talks to xAI's Grok through the Responses API and leans on Grok's own abilities (long context, native vision, web and X search, image, video and speech generation) instead of piling on custom memory. Media is delivered straight to the channel, so every request gets one clean reply.</p>
           <p>Aetherion is run and maintained by its creator, so there's nothing to host. Add it to your server for free and the non-AI stuff works right away. The Grok features below turn on with <a href="#premium">Premium</a>.</p>
           <div class="tip"><strong>Setup tip:</strong> in Server Settings → Roles, drag Aetherion's role <b>above</b> any roles it should hand out (reaction roles, color roles, auto-role). Discord only lets a bot give roles that sit below its own.</div>
         </div>
-        <ol class="steps">
+        <ol class="steps reveal" data-d="1">
           <li><span class="num">1</span><div><h3>Mention or reply <span class="badge b-premium">Premium</span></h3><p>Aetherion activates on a mention, a reply to it, or a clearly directed message, and reads any images in the chat.</p></div></li>
           <li><span class="num">2</span><div><h3>Say “Aetherion” in voice <span class="badge b-premium">Premium</span></h3><p>Run <code>/voice join</code>, say the wake word, ask, then pause. The reply plays back in the same channel.</p></div></li>
           <li><span class="num">3</span><div><h3>Play for Aether Coins <span class="badge b-any">Free</span></h3><p>Claim <code>/coins daily</code>, then take a seat at blackjack, slots, poker and more. It's all play money.</p></div></li>
@@ -135,12 +341,13 @@
 
     <section class="section" id="premium">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="kicker">Premium</span>
           <h2>Unlock the <span class="grad">Grok</span> side</h2>
           <p>Adding Aetherion is free, and so are music, games and server tools. Premium turns on every AI feature for your whole server.</p>
+          <p class="head-link"><a class="btn btn-primary btn-sm" href="premium.html">Get Premium: full details &amp; comparison →</a></p>
         </div>
-        <div class="plans">
+        <div class="plans reveal">
           <article class="plan">
             <div class="plan-head">
               <h3>Free</h3>
@@ -175,8 +382,8 @@
           </article>
         </div>
 
-        <div class="buy">
-          <h3 class="buy-title">How to get Premium</h3>
+        <div class="buy reveal">
+          <h3 class="buy-title">How to get Premium <a class="more-link" href="premium.html">Full guide →</a></h3>
           <ol class="steps buy-steps">
             <li><span class="num">1</span><div><h3>Pay $4.99</h3><p>Send it through PayPal.me. Put your Discord username and server name in the payment note.</p></div></li>
             <li><span class="num">2</span><div><h3>Message me</h3><p>DM me on Discord and I'll send you a one-time code.</p></div></li>
@@ -196,7 +403,7 @@
             <li><b>Codes stack.</b> Renew early and 30 more days go on top.</li>
             <li><b>Heads-up first.</b> You get a reminder 3 days before it ends.</li>
             <li><b>No surprises.</b> When it ends, AI features just switch off. Nothing renews by itself.</li>
-            <li><b>Check anytime</b> with <code>/premium status</code>.</li>
+            <li><b>Check anytime</b> with <code>/premium status</code>. <a href="premium.html#renewals">Renewal details</a>.</li>
           </ul>
         </div>
       </div>
@@ -204,7 +411,7 @@
 
     <section class="section" id="commands">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="kicker">Commands</span>
           <h2>Every command</h2>
           <p>21 slash commands plus the Read aloud message menu. <span class="badge b-premium">Premium</span> means the server needs Premium. Click a command to copy it. <code class="arg">arg?</code> means optional.</p>
@@ -370,12 +577,29 @@
       </div>
     </section>
 
+    <section class="section section-tight" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="kicker">FAQ</span>
+          <h2>Quick answers</h2>
+          <p>Permissions, Premium codes, privacy and more.</p>
+        </div>
+        <div class="faq-list faq-teaser reveal">
+<details class="faq"><summary>Why does Aetherion ask for so many permissions?</summary><div class="faq-body"><p>Each permission in the invite maps to one feature, like Manage Roles for reaction roles and autorole, View Audit Log for <code>/logs</code>, Change Nickname for <code>/customize</code> name and Connect/Speak for music and voice. <a href="faq.html#permissions">See the full list</a>.</p></div></details>
+<details class="faq"><summary>How do I redeem a Premium code?</summary><div class="faq-body"><p>A server admin (Manage Server) runs <code>/premium redeem AETH-XXXX-XXXX</code> with the code you get after paying. <a href="faq.html#redeem">More</a>.</p></div></details>
+<details class="faq"><summary>What happens when Premium ends?</summary><div class="faq-body"><p>AI features switch off, free features keep working, and your <code>/customize</code> name and personality pause, then return if you renew. <a href="faq.html#premium-ends">More</a>.</p></div></details>
+<details class="faq"><summary>Does Aetherion store my messages?</summary><div class="faq-body"><p>Only briefly: saved channel messages expire after 3 days, and voice notes are only transcribed when sent to the bot. <a href="privacy.html">Read the Privacy Policy</a>.</p></div></details>
+        </div>
+        <p class="teaser-more reveal"><a class="btn btn-ghost" href="faq.html">Read the full FAQ</a> <a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Ask Ori on Discord</a></p>
+      </div>
+    </section>
+
     <section class="section section-cta">
       <div class="wrap">
-        <div class="final-cta">
+        <div class="final-cta reveal">
           <img src="assets/logo.png" alt="" width="72" height="72">
           <h2>Bring Aetherion to your server</h2>
-          <p>Free to add. Premium ($4.99/mo) unlocks the Grok features with a code.</p>
+          <p>Free to add. <a href="premium.html">Premium</a> ($4.99/mo per server) unlocks the Grok features with a code.</p>
           <div class="cta center">
             <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
             <a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Questions? Message me</a>
@@ -391,14 +615,26 @@
         <a class="brand" href="#top"><img src="assets/logo.png" alt="" width="30" height="30"><span>Aetherion</span></a>
         <p>Grok-powered Discord bot, built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
       </div>
-      <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="#how">How it works</a>
-        <a href="#premium">Premium</a>
-        <a href="#commands">Commands</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div>
+          <h2>Explore</h2>
+          <a href="#features">Features</a>
+          <a href="#commands">Commands</a>
+          <a href="premium.html">Get Premium</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support (Discord)</a>
+          <a href="faq.html#redeem">Redeem a code</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </nav>
     </div>
     <div class="wrap footer-note">Not affiliated with Discord or xAI. Grok models and APIs by xAI. Aether Coins are play money with no real-world value.</div>
   </footer>

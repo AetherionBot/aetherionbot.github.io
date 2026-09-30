@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aetherion FAQ: permissions, Premium codes, privacy and limits</title>
+  <meta name="description" content="Answers about Aetherion: why each Discord permission is requested, how to redeem a Premium code, what happens when Premium ends, role order, message storage and the daily AI limit.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://aetherionbot.github.io/faq.html">
+  <meta property="og:site_name" content="Aetherion">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aetherionbot.github.io/faq.html">
+  <meta property="og:title" content="Aetherion FAQ">
+  <meta property="og:description" content="Permissions explained, how to redeem a Premium code, what happens when Premium ends, privacy and the daily AI limit.">
+  <meta property="og:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aetherion FAQ">
+  <meta name="twitter:description" content="Permissions explained, how to redeem a Premium code, what happens when Premium ends, privacy and the daily AI limit.">
+  <meta name="twitter:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta name="twitter:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does Aetherion ask for so many permissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>The invite link asks for one permission bundle (309576723664). It does <b>not<\/b> include Administrator, Kick, Ban or Manage Server. Each permission is tied to a feature:<\/p><ul><li><b>View Channels, Send Messages<\/b>: Read the channels you add it to and reply in them. Nothing works without these.<\/li><li><b>Send Messages in Threads, Create Public Threads<\/b>: Reply inside threads, and open a thread when you ask Aetherion to.<\/li><li><b>Embed Links<\/b>: Post the gold embeds used by /help, games, the wallet and the now-playing panel.<\/li><li><b>Attach Files<\/b>: Send images, video and audio it generates, welcome banners and the drawn game tables.<\/li><li><b>Read Message History<\/b>: Follow a conversation and reply chain, and let /purge see the messages it deletes.<\/li><li><b>Add Reactions<\/b>: Add the reactions for reaction-role and color-role panels.<\/li><li><b>Use External Emojis<\/b>: Use your server's custom emojis in its replies and panels.<\/li><li><b>Manage Roles<\/b>: Give out roles for reaction roles, color roles and /setup autorole. Discord also needs its role to sit above them (see below).<\/li><li><b>Manage Channels<\/b>: Rename the voice channel for /setup datechannel each night.<\/li><li><b>View Audit Log<\/b>: Show who did what in /setup logs entries (for example who deleted a message or changed a role).<\/li><li><b>Manage Messages<\/b>: Needed for /purge and message cleanup.<\/li><li><b>Change Nickname<\/b>: Lets /customize name rename Aetherion in your server.<\/li><li><b>Connect, Speak<\/b>: Join a voice channel and talk or play audio: /play music, /voice join, /audio and Read aloud.<\/li><\/ul><p>You can switch individual permissions off in Server Settings → Roles. Everything else keeps working; only the feature in the table stops.<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't Aetherion give out a role? How do I move its role up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Discord only lets a bot hand out roles that sit <b>below<\/b> its own role. If reaction roles, color roles or auto-role fail:<\/p><ol><li>Open Server Settings → Roles.<\/li><li>Drag <b>Aetherion<\/b>'s role above every role it should give out.<\/li><li>Save, then try again. Make sure it still has <b>Manage Roles<\/b>.<\/li><\/ol>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I redeem a Premium code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>After you <a href=\"https://aetherionbot.github.io/premium.html\">pay and message Ori<\/a> you get a code that looks like AETH-XXXX-XXXX. Someone with <b>Manage Server<\/b> runs this in the server that should get Premium:<\/p><p>/premium redeem AETH-XXXX-XXXX<\/p><p>Premium is active right away. Check it any time with /premium status. After 5 wrong codes in 15 minutes you are locked out for the rest of that window, so copy the code exactly.<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Premium ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>AI features switch off: AI chat, voice-note replies, live voice, /audio, Read aloud, AI welcome banners and emoji descriptions. Aetherion posts a notice when it ends.<\/p><p>Your custom name, personality and avatar from /customize are <b>paused, not deleted<\/b>, and they come back if you renew. Everything free keeps working: music, the 7 games and Aether Coins, reaction and color roles, logs, autorole, welcome messages, /profile, /server and /top.<\/p><p>Nothing renews by itself. See <a href=\"https://aetherionbot.github.io/premium.html#renewals\">renewals and expiry<\/a>.<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do renewals work, and will I get a reminder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>One code is 30 days. Codes <b>stack<\/b>: redeem another while Premium is active and 30 days are added on top of your current end date, so renewing early loses nothing. About 3 days before Premium ends, Aetherion posts one reminder in your server's system channel (or DMs whoever redeemed the code, then the server owner, if it can't).<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the daily AI limit work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Each Premium server gets <b>300 AI replies per day<\/b>. An AI reply is one answer from Grok: a chat reply, a voice-note reply or a live-voice reply. The count resets at midnight Eastern Time.<\/p><p>When a server uses them all up, Aetherion says so (at most once an hour per channel) and stays quiet until the reset. Music, games, roles and every other non-AI feature keep working. Image and video generation has its own separate daily limit.<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Aetherion store my messages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Only briefly. To follow a conversation it keeps a short record of recent channel messages (the first 280 characters, up to 150 per channel), and each one <b>expires after 3 days<\/b>. If you delete a message on Discord, its saved copy is deleted too.<\/p><p>Voice notes and audio files are only transcribed when they are sent <b>to the bot<\/b> (a reply to it, an @mention, or its name in the text). It does not record or save voice audio. Aether Coin wallets, stats and server settings are kept until deleted. Full details are in the <a href=\"https://aetherionbot.github.io/privacy.html\">Privacy Policy<\/a>.<\/p>"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reach Ori?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>Message me on Discord: <a href=\"https://discord.com/users/1022200760018161684\" target=\"_blank\" rel=\"noopener\">my Discord profile<\/a>. That is the place for questions, bug reports, Premium codes and data deletion requests. I also build and maintain the bot on GitHub as <a href=\"https://github.com/OniOrii\" target=\"_blank\" rel=\"noopener\">@OniOrii<\/a>.<\/p>"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <nav class="nav" id="top" aria-label="Main">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#commands">Commands</a>
+        <a href="premium.html">Premium</a>
+        <a href="faq.html" aria-current="page">FAQ</a>
+      </div>
+      <a class="btn btn-primary btn-sm nav-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+      <details class="nav-menu">
+        <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+        <div class="nav-panel">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#commands">Commands</a>
+          <a href="premium.html">Premium</a>
+          <a href="faq.html" aria-current="page">FAQ</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap">
+        <span class="kicker">FAQ</span>
+        <h1>Questions, <span class="grad">answered</span></h1>
+        <p class="lead">Permissions, Premium codes, role order, privacy and limits. Can't find it? Message me on Discord.</p>
+        <div class="cta center"><a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.5 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg> Ask Ori on Discord</a></div>
+      </div>
+    </header>
+    <section class="section section-tight" style="padding-top:24px">
+      <div class="wrap faq-layout">
+        <nav class="faq-toc" aria-label="Questions"><strong>Jump to</strong><a href="#permissions">Permissions</a><a href="#role-order">Role order</a><a href="#redeem">Redeem a code</a><a href="#premium-ends">When Premium ends</a><a href="#renew">Renewals & reminders</a><a href="#ai-limit">Daily AI limit</a><a href="#storage">Message storage</a><a href="#contact">Reach Ori</a></nav>
+        <div class="faq-list">
+<h2 class="faq-group">Setup</h2><details class="faq" id="permissions"><summary>Why does Aetherion ask for so many permissions?</summary><div class="faq-body"><p>The invite link asks for one permission bundle (<code>309576723664</code>). It does <b>not</b> include Administrator, Kick, Ban or Manage Server. Each permission is tied to a feature:</p><div class="table-scroll"><table class="legal-table faq-table"><thead><tr><th scope="col">Permission</th><th scope="col">Why Aetherion asks for it</th></tr></thead><tbody><tr><th scope="row">View Channels, Send Messages</th><td>Read the channels you add it to and reply in them. Nothing works without these.</td></tr><tr><th scope="row">Send Messages in Threads, Create Public Threads</th><td>Reply inside threads, and open a thread when you ask Aetherion to.</td></tr><tr><th scope="row">Embed Links</th><td>Post the gold embeds used by <code>/help</code>, games, the wallet and the now-playing panel.</td></tr><tr><th scope="row">Attach Files</th><td>Send images, video and audio it generates, welcome banners and the drawn game tables.</td></tr><tr><th scope="row">Read Message History</th><td>Follow a conversation and reply chain, and let <code>/purge</code> see the messages it deletes.</td></tr><tr><th scope="row">Add Reactions</th><td>Add the reactions for reaction-role and color-role panels.</td></tr><tr><th scope="row">Use External Emojis</th><td>Use your server's custom emojis in its replies and panels.</td></tr><tr><th scope="row">Manage Roles</th><td>Give out roles for reaction roles, color roles and <code>/setup autorole</code>. Discord also needs its role to sit above them (see below).</td></tr><tr><th scope="row">Manage Channels</th><td>Rename the voice channel for <code>/setup datechannel</code> each night.</td></tr><tr><th scope="row">View Audit Log</th><td>Show who did what in <code>/setup logs</code> entries (for example who deleted a message or changed a role).</td></tr><tr><th scope="row">Manage Messages</th><td>Needed for <code>/purge</code> and message cleanup.</td></tr><tr><th scope="row">Change Nickname</th><td>Lets <code>/customize name</code> rename Aetherion in your server.</td></tr><tr><th scope="row">Connect, Speak</th><td>Join a voice channel and talk or play audio: <code>/play</code> music, <code>/voice join</code>, <code>/audio</code> and Read aloud.</td></tr></tbody></table></div><p>You can switch individual permissions off in Server Settings → Roles. Everything else keeps working; only the feature in the table stops.</p></div></details>
+<details class="faq" id="role-order"><summary>Why can't Aetherion give out a role? How do I move its role up?</summary><div class="faq-body"><p>Discord only lets a bot hand out roles that sit <b>below</b> its own role. If reaction roles, color roles or auto-role fail:</p><ol><li>Open Server Settings → Roles.</li><li>Drag <b>Aetherion</b>'s role above every role it should give out.</li><li>Save, then try again. Make sure it still has <b>Manage Roles</b>.</li></ol></div></details>
+<h2 class="faq-group">Premium</h2><details class="faq" id="redeem"><summary>How do I redeem a Premium code?</summary><div class="faq-body"><p>After you <a href="premium.html">pay and message Ori</a> you get a code that looks like <code>AETH-XXXX-XXXX</code>. Someone with <b>Manage Server</b> runs this in the server that should get Premium:</p><p><code>/premium redeem AETH-XXXX-XXXX</code></p><p>Premium is active right away. Check it any time with <code>/premium status</code>. After 5 wrong codes in 15 minutes you are locked out for the rest of that window, so copy the code exactly.</p></div></details>
+<details class="faq" id="premium-ends"><summary>What happens when Premium ends?</summary><div class="faq-body"><p>AI features switch off: AI chat, voice-note replies, live voice, <code>/audio</code>, Read aloud, AI welcome banners and emoji descriptions. Aetherion posts a notice when it ends.</p><p>Your custom name, personality and avatar from <code>/customize</code> are <b>paused, not deleted</b>, and they come back if you renew. Everything free keeps working: music, the 7 games and Aether Coins, reaction and color roles, logs, autorole, welcome messages, <code>/profile</code>, <code>/server</code> and <code>/top</code>.</p><p>Nothing renews by itself. See <a href="premium.html#renewals">renewals and expiry</a>.</p></div></details>
+<details class="faq" id="renew"><summary>How do renewals work, and will I get a reminder?</summary><div class="faq-body"><p>One code is 30 days. Codes <b>stack</b>: redeem another while Premium is active and 30 days are added on top of your current end date, so renewing early loses nothing. About 3 days before Premium ends, Aetherion posts one reminder in your server's system channel (or DMs whoever redeemed the code, then the server owner, if it can't).</p></div></details>
+<details class="faq" id="ai-limit"><summary>How does the daily AI limit work?</summary><div class="faq-body"><p>Each Premium server gets <b>300 AI replies per day</b>. An AI reply is one answer from Grok: a chat reply, a voice-note reply or a live-voice reply. The count resets at midnight Eastern Time.</p><p>When a server uses them all up, Aetherion says so (at most once an hour per channel) and stays quiet until the reset. Music, games, roles and every other non-AI feature keep working. Image and video generation has its own separate daily limit.</p></div></details>
+<h2 class="faq-group">Privacy</h2><details class="faq" id="storage"><summary>Does Aetherion store my messages?</summary><div class="faq-body"><p>Only briefly. To follow a conversation it keeps a short record of recent channel messages (the first 280 characters, up to 150 per channel), and each one <b>expires after 3 days</b>. If you delete a message on Discord, its saved copy is deleted too.</p><p>Voice notes and audio files are only transcribed when they are sent <b>to the bot</b> (a reply to it, an @mention, or its name in the text). It does not record or save voice audio. Aether Coin wallets, stats and server settings are kept until deleted. Full details are in the <a href="privacy.html">Privacy Policy</a>.</p></div></details>
+<h2 class="faq-group">Help</h2><details class="faq" id="contact"><summary>How do I reach Ori?</summary><div class="faq-body"><p>Message me on Discord: <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">my Discord profile</a>. That is the place for questions, bug reports, Premium codes and data deletion requests. I also build and maintain the bot on GitHub as <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="30" height="30"><span>Aetherion</span></a>
+        <p>Grok-powered Discord bot, built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div>
+          <h2>Explore</h2>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#commands">Commands</a>
+          <a href="premium.html">Get Premium</a>
+          <a href="faq.html" aria-current="page">FAQ</a>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support (Discord)</a>
+          <a href="faq.html#redeem">Redeem a code</a>
+          <a href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </nav>
+    </div>
+    <div class="wrap footer-note">Not affiliated with Discord or xAI. Grok models and APIs by xAI. Aether Coins are play money with no real-world value.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

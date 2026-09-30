@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aetherion commands: all 21 slash commands</title>
+  <title>Aetherion commands: all 22 slash commands</title>
   <meta name="description" content="Every Aetherion slash command with options and permissions: music, seven games, Aether Coins, profiles, server setup, reaction roles and Premium.">
   <meta name="theme-color" content="#0b0d14">
   <meta name="color-scheme" content="dark">
@@ -12,14 +12,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aetherionbot.github.io/commands.html">
   <meta property="og:title" content="Aetherion commands">
-  <meta property="og:description" content="Search all 21 slash commands: music, games, coins, roles, logs and Premium.">
+  <meta property="og:description" content="Search all 22 slash commands: music, games, coins, roles, logs and Premium.">
   <meta property="og:image" content="https://aetherionbot.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aetherion commands">
-  <meta name="twitter:description" content="Search all 21 slash commands: music, games, coins, roles, logs and Premium.">
+  <meta name="twitter:description" content="Search all 22 slash commands: music, games, coins, roles, logs and Premium.">
   <meta name="twitter:image" content="https://aetherionbot.github.io/og-image.png">
   <meta name="twitter:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -75,7 +75,7 @@
       <div class="wrap cmd-tools">
         <label class="search">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
-          <input id="cmd-search" type="search" placeholder="Search 21 slash commands…" autocomplete="off" aria-label="Search commands">
+          <input id="cmd-search" type="search" placeholder="Search 22 slash commands…" autocomplete="off" aria-label="Search commands">
         </label>
         <div class="chips" role="group" aria-label="Filter by category"><button class="chip active" data-filter="all" type="button">All</button><button class="chip" data-filter="chat" type="button">Chat &amp; voice</button><button class="chip" data-filter="music" type="button">Music</button><button class="chip" data-filter="games" type="button">Games</button><button class="chip" data-filter="coins" type="button">Aether Coins</button><button class="chip" data-filter="community" type="button">Profiles &amp; stats</button><button class="chip" data-filter="admin" type="button">Server setup</button><button class="chip" data-filter="premium" type="button">Premium</button></div>
       </div>
@@ -83,7 +83,7 @@
 
     <section class="section section-tight cmd-section" id="commands">
       <div class="wrap">
-        <p class="cmd-note">21 slash commands plus the Read aloud message menu. <code class="arg">arg?</code> means optional.</p>
+        <p class="cmd-note">22 slash commands plus the Read aloud message menu. <code class="arg">arg?</code> means optional.</p>
         <div id="cmd-list">
 <section class="cmd-group" data-group="chat"><h3><span aria-hidden="true">🎙️</span> Chat &amp; voice <small>6</small></h3><div class="cmd-grid"><article class="cmd" data-cat="chat" data-search="/help how aetherion works, and every command. topic jump straight to a help page">
   <header><button class="cmd-name" type="button" data-copy="/help" title="Copy">/help</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
@@ -165,7 +165,7 @@
   <header><button class="cmd-name" type="button" data-copy="/top" title="Copy">/top</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
   <p>Activity ranks on this server. Messages, voice, or level.</p><ul class="args"><li><code class="arg">sort?</code><span>How to rank people</span></li></ul>
 </article></div></section>
-<section class="cmd-group" data-group="admin"><h3><span aria-hidden="true">🛡️</span> Server setup <small>10</small></h3><div class="cmd-grid"><article class="cmd" data-cat="admin" data-search="/setup welcome set the channel for welcome banners. administrators only. channel channel where new-member welcomes should post">
+<section class="cmd-group" data-group="admin"><h3><span aria-hidden="true">🛡️</span> Server setup <small>11</small></h3><div class="cmd-grid"><article class="cmd" data-cat="admin" data-search="/setup welcome set the channel for welcome banners. administrators only. channel channel where new-member welcomes should post">
   <header><button class="cmd-name" type="button" data-copy="/setup welcome" title="Copy">/setup welcome</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
   <p>Set the channel for welcome banners. Administrators only.</p><ul class="args"><li><code class="arg req">channel</code><span>Channel where new-member welcomes should post</span></li></ul>
 </article>
@@ -184,6 +184,10 @@
 <article class="cmd" data-cat="admin" data-search="/purge delete up to 100 recent messages in this channel. administrators only. amount how many messages to delete (1-100)">
   <header><button class="cmd-name" type="button" data-copy="/purge" title="Copy">/purge</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
   <p>Delete up to 100 recent messages in this channel. Administrators only.</p><ul class="args"><li><code class="arg">amount?</code><span>How many messages to delete (1-100)</span></li></ul>
+</article>
+<article class="cmd" data-cat="admin" data-search="/forgetme erase the messages, memory and activity stats aetherion stores for this server. owner only. only the server owner can use it, and it asks for confirmation first. premium, settings, usage counters and aether coin wallets are kept.">
+  <header><button class="cmd-name" type="button" data-copy="/forgetme" title="Copy">/forgetme</button><span class="badges"><span class="badge b-admin">Server owner</span></span></header>
+  <p>Erase the messages, memory and activity stats Aetherion stores for this server. Owner only. Only the server owner can use it, and it asks for confirmation first. Premium, settings, usage counters and Aether Coin wallets are kept.</p>
 </article>
 <article class="cmd" data-cat="admin" data-search="/reactionrole post post a reaction-role message in this channel. text text on the message people will react to">
   <header><button class="cmd-name" type="button" data-copy="/reactionrole post" title="Copy">/reactionrole post</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
@@ -255,7 +259,8 @@
         </div>
         <div>
           <h2>Support</h2>
-          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support (Discord)</a>
+          <a href="https://discord.gg/AqjhS64veF" target="_blank" rel="noopener">Join our support server</a>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message Ori on Discord</a>
           <a href="faq.html#redeem">Redeem a code</a>
           <a href="faq.html#permissions">Permissions explained</a>
         </div>

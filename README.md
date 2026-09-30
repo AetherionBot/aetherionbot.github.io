@@ -2,9 +2,10 @@
 
 Static landing page for the Aetherion Discord bot. Plain HTML/CSS/JS with no build step.
 
-- `index.html`: the landing page (Discord-style illustrations, features, Premium, commands, FAQ teaser). Commands come from the bot's source.
+- `index.html`: short landing page (hero with mock cluster, fact band, four highlights, Premium teaser, CTA).
+- `features.html`: alternating feature rows with the Discord-style illustrations, plus a small-features grid. `commands.html`: every slash command with search and filters (cards come from the bot's source).
 - `premium.html`: Get Premium (price, free vs Premium table, how to buy, renewals). `faq.html`: FAQ accordions with FAQPage JSON-LD.
-- `styles.css`, `script.js`: styling plus command search, filter and click-to-copy.
+- `styles.css`, `script.js`: styling plus command search, filter, click-to-copy and scroll reveal.
 - `terms.html`, `privacy.html`: Terms of Service and Privacy Policy (linked from the footer; use these URLs in the Discord Developer Portal).
 - `assets/logo.png`: the Aetherion logo. `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`, `android-chrome-*.png`, `og-image.png` (1200x630 share image) are generated from it. `sitemap.xml`, `robots.txt`, `site.webmanifest` for search/install metadata.
 

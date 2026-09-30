@@ -109,43 +109,44 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
 
-  <nav class="nav" id="top" aria-label="Main">
+  <header class="nav" id="top">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
-      <div class="nav-links">
-        <a href="index.html#features">Features</a>
-        <a href="index.html#commands">Commands</a>
+      <a class="brand" href="index.html" aria-label="Aetherion home"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
+      <nav class="nav-right" aria-label="Main">
+        <div class="nav-links">
+        <a href="features.html">Features</a>
+        <a href="commands.html">Commands</a>
         <a href="premium.html">Premium</a>
         <a href="faq.html" aria-current="page">FAQ</a>
-      </div>
-      <a class="btn btn-primary btn-sm nav-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
-      <details class="nav-menu">
-        <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
-        <div class="nav-panel">
-          <a href="index.html#features">Features</a>
-          <a href="index.html#commands">Commands</a>
+        </div>
+        <a class="btn btn-primary btn-sm nav-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+        <details class="nav-menu">
+          <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+          <div class="nav-panel">
+          <a href="features.html">Features</a>
+          <a href="commands.html">Commands</a>
           <a href="premium.html">Premium</a>
           <a href="faq.html" aria-current="page">FAQ</a>
-          <a href="terms.html">Terms</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support</a>
-        </div>
-      </details>
+            <a class="btn btn-primary nav-panel-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+          </div>
+        </details>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main">
     <header class="page-hero">
-      <div class="wrap">
+      <div class="wrap page-hero-inner">
         <span class="kicker">FAQ</span>
         <h1>Questions, <span class="grad">answered</span></h1>
-        <p class="lead">Permissions, Premium codes, role order, privacy and limits. Can't find it? Message me on Discord.</p>
-        <div class="cta center"><a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.5 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg> Ask Ori on Discord</a></div>
+        <p class="lead">Permissions, Premium codes, role order, privacy and limits.</p>
+        <div class="cta"><a class="btn btn-ghost" href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.5 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.9 19.9 0 0 0 6 3l1.3-2.1a13 13 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a13 13 0 0 1-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.5 8 10.5s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg> Ask Ori on Discord</a></div>
       </div>
     </header>
-    <section class="section section-tight" style="padding-top:24px">
+
+    <section class="section section-tight">
       <div class="wrap faq-layout">
-        <nav class="faq-toc" aria-label="Questions"><strong>Jump to</strong><a href="#permissions">Permissions</a><a href="#role-order">Role order</a><a href="#redeem">Redeem a code</a><a href="#premium-ends">When Premium ends</a><a href="#renew">Renewals & reminders</a><a href="#ai-limit">Daily AI limit</a><a href="#storage">Message storage</a><a href="#contact">Reach Ori</a></nav>
+        <nav class="faq-toc" aria-label="Questions"><strong>Jump to</strong><a href="#permissions">Permissions</a><a href="#role-order">Role order</a><a href="#redeem">Redeem a code</a><a href="#premium-ends">When Premium ends</a><a href="#renew">Renewals &amp; reminders</a><a href="#ai-limit">Daily AI limit</a><a href="#storage">Message storage</a><a href="#contact">Reach Ori</a></nav>
         <div class="faq-list">
 <h2 class="faq-group">Setup</h2><details class="faq" id="permissions"><summary>Why does Aetherion ask for so many permissions?</summary><div class="faq-body"><p>The invite link asks for one permission bundle (<code>309576723664</code>). It does <b>not</b> include Administrator, Kick, Ban or Manage Server. Each permission is tied to a feature:</p><div class="table-scroll"><table class="legal-table faq-table"><thead><tr><th scope="col">Permission</th><th scope="col">Why Aetherion asks for it</th></tr></thead><tbody><tr><th scope="row">View Channels, Send Messages</th><td>Read the channels you add it to and reply in them. Nothing works without these.</td></tr><tr><th scope="row">Send Messages in Threads, Create Public Threads</th><td>Reply inside threads, and open a thread when you ask Aetherion to.</td></tr><tr><th scope="row">Embed Links</th><td>Post the gold embeds used by <code>/help</code>, games, the wallet and the now-playing panel.</td></tr><tr><th scope="row">Attach Files</th><td>Send images, video and audio it generates, welcome banners and the drawn game tables.</td></tr><tr><th scope="row">Read Message History</th><td>Follow a conversation and reply chain, and let <code>/purge</code> see the messages it deletes.</td></tr><tr><th scope="row">Add Reactions</th><td>Add the reactions for reaction-role and color-role panels.</td></tr><tr><th scope="row">Use External Emojis</th><td>Use your server's custom emojis in its replies and panels.</td></tr><tr><th scope="row">Manage Roles</th><td>Give out roles for reaction roles, color roles and <code>/setup autorole</code>. Discord also needs its role to sit above them (see below).</td></tr><tr><th scope="row">Manage Channels</th><td>Rename the voice channel for <code>/setup datechannel</code> each night.</td></tr><tr><th scope="row">View Audit Log</th><td>Show who did what in <code>/setup logs</code> entries (for example who deleted a message or changed a role).</td></tr><tr><th scope="row">Manage Messages</th><td>Needed for <code>/purge</code> and message cleanup.</td></tr><tr><th scope="row">Change Nickname</th><td>Lets <code>/customize name</code> rename Aetherion in your server.</td></tr><tr><th scope="row">Connect, Speak</th><td>Join a voice channel and talk or play audio: <code>/play</code> music, <code>/voice join</code>, <code>/audio</code> and Read aloud.</td></tr></tbody></table></div><p>You can switch individual permissions off in Server Settings → Roles. Everything else keeps working; only the feature in the table stops.</p></div></details>
 <details class="faq" id="role-order"><summary>Why can't Aetherion give out a role? How do I move its role up?</summary><div class="faq-body"><p>Discord only lets a bot hand out roles that sit <b>below</b> its own role. If reaction roles, color roles or auto-role fail:</p><ol><li>Open Server Settings → Roles.</li><li>Drag <b>Aetherion</b>'s role above every role it should give out.</li><li>Save, then try again. Make sure it still has <b>Manage Roles</b>.</li></ol></div></details>
@@ -163,22 +164,22 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="30" height="30"><span>Aetherion</span></a>
-        <p>Grok-powered Discord bot, built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="34" height="34"><span>Aetherion</span></a>
+        <p>A Grok-powered Discord bot for music, games and server tools. Built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
       </div>
       <nav class="footer-cols" aria-label="Footer">
         <div>
           <h2>Explore</h2>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#commands">Commands</a>
-          <a href="premium.html">Get Premium</a>
+          <a href="features.html">Features</a>
+          <a href="commands.html">Commands</a>
+          <a href="premium.html">Premium</a>
           <a href="faq.html" aria-current="page">FAQ</a>
         </div>
         <div>
           <h2>Support</h2>
           <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Contact support (Discord)</a>
           <a href="faq.html#redeem">Redeem a code</a>
-          <a href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+          <a href="faq.html#permissions">Permissions explained</a>
         </div>
         <div>
           <h2>Legal</h2>

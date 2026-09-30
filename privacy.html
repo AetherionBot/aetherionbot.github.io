@@ -116,13 +116,13 @@
         <p>Aetherion only transcribes a Discord voice message or audio file when it is sent to the bot: a reply to one of Aetherion’s messages, a message that @mentions Aetherion (or its role), or one that uses its name in the text. It then downloads the clip, sends it to xAI to be transcribed, and posts a reply that quotes the transcript, with a spoken version. Other voice messages and audio files are not downloaded, transcribed or sent to xAI; the short channel history only notes that a voice message was posted (“[voice message]”, plus any text you typed with it). The clip itself is not saved by Aetherion.</p>
 
         <h3>Voice channels</h3>
-        <p>When someone runs <code>/voice join</code> or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
+        <p>When someone runs <code>/voice</code> (to join) or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
 
         <h3>Image, video and speech generation</h3>
         <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the daily generation limit, it counts how many generations each server has used today.</p>
 
         <h3>Aether Coins and games</h3>
-        <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed <code>/coins daily</code>, and when your wallet was created. Game rounds themselves are held in memory only.</p>
+        <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins</code>, and when your wallet was created. Game rounds themselves are held in memory only.</p>
 
         <h3>Activity, levels and ranks</h3>
         <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and your XP and level, plus the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
@@ -212,7 +212,7 @@
         <p>You can also limit what Aetherion sees:</p>
         <ul>
           <li>Don’t mention Aetherion, reply to it or use its name in messages, voice messages or audio files you don’t want it to process.</li>
-          <li>Don’t use <code>/voice join</code> or <code>/play</code> if you don’t want your speech transcribed.</li>
+          <li>Don’t use <code>/voice</code> (to join) or <code>/play</code> if you don’t want your speech transcribed.</li>
           <li>Server administrators can use Discord permissions to keep Aetherion out of specific channels, or remove it from the server.</li>
         </ul>
         <p>Data held by Discord, xAI or PayPal has to be requested from them directly.</p>

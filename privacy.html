@@ -42,6 +42,7 @@
       <a class="brand" href="index.html" aria-label="Aetherion home"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
       <nav class="nav-right" aria-label="Main">
         <div class="nav-links">
+        <a href="getting-started.html">Get started</a>
         <a href="features.html">Features</a>
         <a href="commands.html">Commands</a>
         <a href="premium.html">Premium</a>
@@ -51,6 +52,7 @@
         <details class="nav-menu">
           <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
           <div class="nav-panel">
+          <a href="getting-started.html">Get started</a>
           <a href="features.html">Features</a>
           <a href="commands.html">Commands</a>
           <a href="premium.html">Premium</a>
@@ -67,7 +69,7 @@
       <header class="legal-head">
         <span class="kicker">Legal</span>
         <h1>Privacy Policy</h1>
-        <p class="legal-meta">Effective September 30, 2026</p>
+        <p class="legal-meta">Effective October 1, 2026</p>
         <p>This policy explains what the Aetherion Discord bot (“Aetherion”, “the bot”) collects, why, where it is kept, who it is shared with, and how to get it deleted. Aetherion is run by Ori, an individual developer (“I”, “me”). You can reach me through my <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Discord profile</a>. Also see the <a href="terms.html">Terms of Service</a>.</p>
       </header>
 
@@ -119,10 +121,10 @@
         <p>When someone runs <code>/voice</code> (to join) or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
 
         <h3>Image, video and speech generation</h3>
-        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the daily generation limit, it counts how many generations each server has used today.</p>
+        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the monthly media limit (10 images and 10 videos per server per month), it counts how many generations each server has used this month. A separate daily count of AI replies (300 per server per day) is kept to enforce the daily AI reply limit.</p>
 
         <h3>Aether Coins and games</h3>
-        <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins</code>, and when your wallet was created. Game rounds themselves are held in memory only.</p>
+        <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins</code> and your current daily streak, and when your wallet was created. Game rounds themselves are held in memory only.</p>
 
         <h3>Activity, levels and ranks</h3>
         <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and your XP and level, plus the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
@@ -197,6 +199,7 @@
               <tr><td>Premium records</td><td>Until deleted on request or the service shuts down. Records stay after Premium ends so renewals pick up where they left off.</td></tr>
               <tr><td>Premium payment details</td><td>Held by PayPal under its policies, and in my PayPal account’s transaction history. The bot does not store them.</td></tr>
               <tr><td>Monthly generation counter</td><td>The current month only. Older months are removed.</td></tr>
+              <tr><td>Daily AI reply counter</td><td>Per server and per day, kept for 45 days, then removed.</td></tr>
               <tr><td>Server settings and emoji data</td><td>Until changed, deleted on request, or the service shuts down. Removing Aetherion from a server does not delete them automatically.</td></tr>
               <tr><td>Rate-limit timestamps</td><td>About a minute, in memory only.</td></tr>
               <tr><td>Service logs</td><td>For the retention period set by the hosting provider.</td></tr>
@@ -254,10 +257,12 @@
       <nav class="footer-cols" aria-label="Footer">
         <div>
           <h2>Explore</h2>
+          <a href="getting-started.html">Get started</a>
           <a href="features.html">Features</a>
           <a href="commands.html">Commands</a>
           <a href="premium.html">Premium</a>
           <a href="faq.html">FAQ</a>
+          <a href="changelog.html">Changelog</a>
         </div>
         <div>
           <h2>Support</h2>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aetherion changelog: what&#x27;s new</title>
+  <meta name="description" content="What&#x27;s new in Aetherion: new commands, games, Premium features, limits and fixes, newest first. Highlights only.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://aetherionbot.github.io/changelog.html">
+  <meta property="og:site_name" content="Aetherion">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aetherionbot.github.io/changelog.html">
+  <meta property="og:title" content="Aetherion changelog">
+  <meta property="og:description" content="New commands, games, Premium features and fixes, newest first.">
+  <meta property="og:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aetherion changelog">
+  <meta name="twitter:description" content="New commands, games, Premium features and fixes, newest first.">
+  <meta name="twitter:image" content="https://aetherionbot.github.io/og-image.png">
+  <meta name="twitter:image:alt" content="Aetherion: the crystal logo with the tagline Grok-powered Discord bot">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav" id="top">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Aetherion home"><img src="assets/logo.png" alt="" width="36" height="36"><span>Aetherion</span></a>
+      <nav class="nav-right" aria-label="Main">
+        <div class="nav-links">
+        <a href="getting-started.html">Get started</a>
+        <a href="features.html">Features</a>
+        <a href="commands.html">Commands</a>
+        <a href="premium.html">Premium</a>
+        <a href="faq.html">FAQ</a>
+        </div>
+        <a class="btn btn-primary btn-sm nav-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+        <details class="nav-menu">
+          <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+          <div class="nav-panel">
+          <a href="getting-started.html">Get started</a>
+          <a href="features.html">Features</a>
+          <a href="commands.html">Commands</a>
+          <a href="premium.html">Premium</a>
+          <a href="faq.html">FAQ</a>
+            <a class="btn btn-primary nav-panel-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="wrap page-hero-inner">
+        <span class="kicker">Changelog</span>
+        <h1>What's <span class="grad">new</span></h1>
+        <p class="lead">Highlights of what changed, newest first.</p>
+      </div>
+    </header>
+
+    <section class="section section-tight" id="updates">
+      <div class="wrap wrap-mid">
+<section class="cl-day reveal" id="d2026-10-01"><h2><time datetime="2026-10-01">October 1, 2026</time></h2><ul class="cl-list"><li><strong>Friendly errors everywhere.</strong> if a command, button or form hits a problem, Aetherion now answers privately with "Something broke on my end, try again in a moment" plus the support server link, instead of Discord's "The application did not respond".</li><li><strong><code>/coins</code> daily streak.</strong> claim your daily on consecutive days (Eastern calendar days) and the claim message shows <strong>Day N streak</strong>. From day 2 you get a small bonus on top of the 2,000: +100 per extra day, capped at +500, so a streak pays 2,500 a day at most.</li><li><strong>Quick-start note for server owners.</strong> when Aetherion joins a server, the owner also gets one short private message pointing to <code>/setup status</code>, <code>/help</code> and the support server. It is sent once per server (never again, even if you re-add the bot), and it is skipped quietly if your DMs are closed.</li><li><strong><code>/premium status</code> shows your usage.</strong> Premium servers see AI replies used today (out of the daily limit) and images and videos used this month (out of the monthly limits, including any custom limit set for the server), with when each resets.</li><li><strong>Short cooldowns on <code>/play</code>, <code>/purge</code> and <code>/game</code>.</strong> one use per person every 4, 5 and 3 seconds, so a double-click or a spammed command can't pile up. <code>/purge</code> now only accepts 1 to 100 in the amount box.</li></ul></section>
+<section class="cl-day reveal" id="d2026-09-30"><h2><time datetime="2026-09-30">September 30, 2026</time></h2><ul class="cl-list"><li><strong>Image and video limits are now monthly.</strong> each server gets <strong>10 images</strong> (generations and edits) and <strong>10 videos per calendar month</strong>, resetting on the 1st at midnight ET, instead of 10 shared per day.</li><li><strong><code>/reactionrole</code> panels, upgraded.</strong> Reaction-role panels are now tidy embeds that update themselves, with Pick one or Pick several modes, several roles added at once, a panel list you can pick from, plus edit and delete.</li><li><strong><code>/game</code> hub for every Aether Coin game.</strong> <code>/game</code> opens one hub for every Aether Coin game: your balance, a line about each game and a button per game. Press one, type your bet and play. Odds, payouts and bet limits are unchanged.</li><li><strong>Same result card for every game.</strong> green for a win, red for a loss, grey for a push, with the game, bet, payout and a playful one-liner like "Jackpot! +500 coins", and your new balance in the footer.</li><li><strong>Play Again buttons.</strong> <strong>Same bet</strong>, <strong>Double</strong> (capped by your balance and the game's max bet) and <strong>Quit</strong> under every finished game; only you can press them and they expire after a minute.</li><li><strong><code>/setup status</code>.</strong> a private one-page checklist of your server's Aetherion setup: welcome, logs, auto-role, reaction roles, color roles, date channel, Premium (active, expired or free) and customization.</li><li><strong><code>/forgetme</code> (server owner only).</strong> erases what Aetherion stores for your server after a confirmation (red "Erase everything" button, 60 seconds): saved channel messages and channel summaries, conversation memory (including voice turns), and activity stats (messages, voice time, XP, levels).</li><li><strong>Daily AI reply limit.</strong> each server gets 300 AI replies per day (chat, voice-note and live-voice replies), resetting at midnight ET.</li><li><strong>Welcome message on joining.</strong> when Aetherion is added to a server it posts one short intro (in the system channel, another channel it can write in, or a DM to the server owner) covering <code>/help</code>, <code>/setup welcome</code>, <code>/setup logs</code>, <code>/setup autorole</code>, <code>/reactionrole</code>, free vs Premium, and a tip to keep its role above the roles it hands out.</li><li><strong>No more big link-preview cards under AI replies.</strong> when Aetherion's answer includes web-search source links and numbered citations like [1], [2], the text, links and numbers are unchanged but Discord no longer attaches large preview embeds (for example a LinkedIn article card) below the reply.</li><li><strong>Aetherion's house wallet is now per server.</strong> every server has its own house wallet, and each starts at <strong>10,000,000</strong> coins (up from 1,000,000 shared by everyone).</li><li><strong>Music is SoundCloud only.</strong> <code>/play</code> and "Aetherion play ..." use SoundCloud. The Pause and Stop buttons now only ever act on the server they are pressed in, and two servers can play music at the same time without interrupting each other.</li></ul></section>
+<section class="cl-day reveal" id="d2026-09-27"><h2><time datetime="2026-09-27">September 27, 2026</time></h2><ul class="cl-list"><li><strong>Aetherion Premium ($4.99/month per server).</strong> Grok-powered features now need Premium on the server.</li><li><strong>Premium codes.</strong> <code>/premium status</code> shows whether the server has Premium, when it ends and how to get it. <code>/premium redeem</code> (Manage Server) activates an <code>AETH-XXXX-XXXX</code> code.</li><li><strong>Expiry reminders.</strong> about 3 days before a timed Premium ends, Aetherion posts one reminder in the server's system channel. If it can't, it DMs whoever redeemed the code, then the server owner.</li><li><strong>Premium notes on free servers.</strong> on a server without Premium, @mentioning or replying to Aetherion gets one short note about Premium per channel per hour. Slash commands answer privately.</li><li><strong><code>/customize</code> (Premium, Manage Server).</strong> make Aetherion yours on your server. Every reply is private.</li><li><strong>Pause and Stop buttons on <code>/play</code>.</strong> the now-playing message is posted in the channel with <strong>Pause/Resume</strong> and <strong>Stop</strong> buttons that anyone in Aetherion's voice channel can use.</li></ul></section>
+        <p class="cl-note">Highlights only. Questions about a change? Ask in our <a href="https://discord.gg/AqjhS64veF" target="_blank" rel="noopener">support server</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="34" height="34"><span>Aetherion</span></a>
+        <p>A Grok-powered Discord bot for music, games and server tools. Built and maintained by <a href="https://github.com/OniOrii" target="_blank" rel="noopener">@OniOrii</a>.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Footer">
+        <div>
+          <h2>Explore</h2>
+          <a href="getting-started.html">Get started</a>
+          <a href="features.html">Features</a>
+          <a href="commands.html">Commands</a>
+          <a href="premium.html">Premium</a>
+          <a href="faq.html">FAQ</a>
+          <a href="changelog.html" aria-current="page">Changelog</a>
+        </div>
+        <div>
+          <h2>Support</h2>
+          <a href="https://discord.gg/AqjhS64veF" target="_blank" rel="noopener">Join our support server</a>
+          <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message Ori on Discord</a>
+          <a href="faq.html#redeem">Redeem a code</a>
+          <a href="faq.html#permissions">Permissions explained</a>
+        </div>
+        <div>
+          <h2>Legal</h2>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </nav>
+    </div>
+    <div class="wrap footer-note">Not affiliated with Discord or xAI. Grok models and APIs by xAI. Aether Coins are play money with no real-world value.</div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

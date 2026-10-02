@@ -121,13 +121,19 @@
         <p>When someone runs <code>/voice</code> (to join) or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
 
         <h3>Image, video and speech generation</h3>
-        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the monthly media limit (10 images and 10 videos per server per month), it counts how many generations each server has used this month. A separate daily count of AI replies (300 per server per day) is kept to enforce the daily AI reply limit.</p>
+        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the monthly media limits (1 image per person per month, 30 images and 10 videos per server per month), it counts how many generations each server has used this month, and how many images each person (by Discord user ID) has made in that server this month. Separate daily counts of AI replies (20 per person and 500 per server per day) are kept to enforce the daily AI reply limits.</p>
 
         <h3>Aether Coins and games</h3>
         <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins</code> and your current daily streak, and when your wallet was created. Game rounds themselves are held in memory only.</p>
 
         <h3>Activity, levels and ranks</h3>
         <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and your XP and level, plus the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
+
+        <h3>Giveaways and polls</h3>
+        <p>When a server runs a giveaway, Aetherion saves the prize, the end time, the required role (if any), who started it, and the Discord user IDs of the people who pressed Enter, plus the winners. For a poll it saves the question, the options, the end time, who started it and, for each person who voted, their Discord user ID and which option(s) they picked. Votes are only used to count; the poll and the web dashboard show totals, never who voted for what. Finished giveaways and polls are removed after 30 days (and only the latest 25 finished ones per server are kept). No AI is involved.</p>
+
+        <h3>Web dashboard (beta)</h3>
+        <p>If you log in to the web dashboard with Discord, it asks Discord (scopes “identify” and “guilds” only) for your user ID, name, avatar and the list of servers you are in, keeps only the ones you manage, and stores that in your login session (a signed cookie plus a session kept in the bot’s memory, which ends after 8 hours, when you log out, or when the bot restarts). Changes made from the dashboard are written to an edit history that records your Discord user ID and name, the server, what changed and when. The dashboard sets no analytics or advertising cookies.</p>
 
         <h3>Server settings</h3>
         <p>Settings that server administrators choose (welcome channel, auto-role, reaction roles, date channel, and log channel and events), plus a list of the servers Aetherion is in (ID, name and member count) for my status view. Aetherion also counts how often each custom server emoji is used and stores a short AI-written description of it.</p>
@@ -199,7 +205,10 @@
               <tr><td>Premium records</td><td>Until deleted on request or the service shuts down. Records stay after Premium ends so renewals pick up where they left off.</td></tr>
               <tr><td>Premium payment details</td><td>Held by PayPal under its policies, and in my PayPal account’s transaction history. The bot does not store them.</td></tr>
               <tr><td>Monthly generation counter</td><td>The current month only. Older months are removed.</td></tr>
-              <tr><td>Daily AI reply counter</td><td>Per server and per day, kept for 45 days, then removed.</td></tr>
+              <tr><td>Daily AI reply counters</td><td>Per server and per day, kept for 45 days, then removed. The per-person count (per server, today only) is cleared when the day changes.</td></tr>
+              <tr><td>Per-person image counter</td><td>The current month only. Older months are removed.</td></tr>
+              <tr><td>Giveaways and polls</td><td>Finished ones are removed after 30 days, and only the latest 25 finished per server are kept. Running ones stay until they end.</td></tr>
+              <tr><td>Dashboard edit history</td><td>A capped log file; the oldest entries are discarded as it fills.</td></tr>
               <tr><td>Server settings and emoji data</td><td>Until changed, deleted on request, or the service shuts down. Removing Aetherion from a server does not delete them automatically.</td></tr>
               <tr><td>Rate-limit timestamps</td><td>About a minute, in memory only.</td></tr>
               <tr><td>Service logs</td><td>For the retention period set by the hosting provider.</td></tr>

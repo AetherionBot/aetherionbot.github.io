@@ -1,7 +1,7 @@
 {
   "name": "Aetherion",
   "short_name": "Aetherion",
-  "description": "Grok-powered Discord bot",
+  "description": "AI-powered Discord bot",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0d14",

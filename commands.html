@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aetherion commands: all 18 slash commands</title>
+  <title>Aetherion commands: all 19 slash commands</title>
   <meta name="description" content="Every Aetherion slash command with options and permissions: music, seven games, Aether Coins, profiles, giveaways, polls, server setup and Premium.">
   <meta name="theme-color" content="#0b0d14">
   <meta name="color-scheme" content="dark">
@@ -12,14 +12,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aetherionbot.github.io/commands.html">
   <meta property="og:title" content="Aetherion commands">
-  <meta property="og:description" content="Search all 18 slash commands: music, games, coins, giveaways, polls, logs and Premium.">
+  <meta property="og:description" content="Search all 19 slash commands: music, games, coins, giveaways, polls, logs and Premium.">
   <meta property="og:image" content="https://aetherionbot.github.io/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Aetherion: the crystal logo with the tagline AI-powered Discord bot">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Aetherion commands">
-  <meta name="twitter:description" content="Search all 18 slash commands: music, games, coins, giveaways, polls, logs and Premium.">
+  <meta name="twitter:description" content="Search all 19 slash commands: music, games, coins, giveaways, polls, logs and Premium.">
   <meta name="twitter:image" content="https://aetherionbot.github.io/og-image.png">
   <meta name="twitter:image:alt" content="Aetherion: the crystal logo with the tagline AI-powered Discord bot">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -81,7 +81,7 @@
       <div class="wrap cmd-tools">
         <label class="search">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2Zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z"/></svg>
-          <input id="cmd-search" type="search" placeholder="Search 18 slash commands…" autocomplete="off" aria-label="Search commands">
+          <input id="cmd-search" type="search" placeholder="Search 19 slash commands…" autocomplete="off" aria-label="Search commands">
         </label>
         <div class="chips" role="group" aria-label="Filter by category"><button class="chip active" data-filter="all" type="button">All</button><button class="chip" data-filter="chat" type="button">Chat &amp; voice</button><button class="chip" data-filter="music" type="button">Music</button><button class="chip" data-filter="games" type="button">Games</button><button class="chip" data-filter="coins" type="button">Aether Coins</button><button class="chip" data-filter="community" type="button">Profiles &amp; stats</button><button class="chip" data-filter="giveaways" type="button">Giveaways &amp; polls</button><button class="chip" data-filter="admin" type="button">Server setup</button><button class="chip" data-filter="premium" type="button">Premium</button></div>
       </div>
@@ -89,7 +89,7 @@
 
     <section class="section section-tight cmd-section" id="commands">
       <div class="wrap">
-        <p class="cmd-note">18 slash commands plus the Read aloud message menu. <code class="arg">arg?</code> means optional.</p>
+        <p class="cmd-note">19 slash commands plus the Read aloud message menu. <code class="arg">arg?</code> means optional.</p>
         <p class="cmd-note"><strong>Reaction roles and Customize</strong> are not slash commands any more: manage them in the <a href="https://aetherion-production-b46c.up.railway.app" target="_blank" rel="noopener">web dashboard (beta)</a>, together with giveaways and polls.</p>
         <div id="cmd-list">
 <section class="cmd-group" data-group="chat"><h2><span aria-hidden="true">🎙️</span> Chat &amp; voice <small>5</small></h2><div class="cmd-grid"><article class="cmd" data-cat="chat" data-search="/help how aetherion works, and every command. topic jump straight to a help page">
@@ -112,9 +112,21 @@
   <header><button class="cmd-name" type="button" data-copy="/ping" title="Copy">/ping</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
   <p>Aetherion latency and connection status.</p>
 </article></div></section>
-<section class="cmd-group" data-group="music"><h2><span aria-hidden="true">🎵</span> Music <small>1</small></h2><div class="cmd-grid"><article class="cmd" data-cat="music" data-search="/play play a song in your voice channel. the now-playing message has pause/resume and stop buttons for anyone in the voice channel. query song name or a soundcloud link">
+<section class="cmd-group" data-group="music"><h2><span aria-hidden="true">🎵</span> Music <small>4</small></h2><div class="cmd-grid"><article class="cmd" data-cat="music" data-search="/play play a song, or add it to the queue if something is playing. one song per command. up to 25 songs can wait per server, and you get added to queue with its position. the next song starts by itself when one ends. the now-playing message shows what is up next and has pause/resume, skip, stop (clears the queue) and queue buttons for anyone in the voice channel, and for admins. query song name or a soundcloud link">
   <header><button class="cmd-name" type="button" data-copy="/play" title="Copy">/play</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
-  <p>Play a song in your voice channel. The now-playing message has Pause/Resume and Stop buttons for anyone in the voice channel.</p><ul class="args"><li><code class="arg req">query</code><span>Song name or a SoundCloud link</span></li></ul>
+  <p>Play a song, or add it to the queue if something is playing. One song per command. Up to 25 songs can wait per server, and you get Added to queue with its position. The next song starts by itself when one ends. The now-playing message shows what is up next and has Pause/Resume, Skip, Stop (clears the queue) and Queue buttons for anyone in the voice channel, and for admins.</p><ul class="args"><li><code class="arg req">query</code><span>Song name or a SoundCloud link</span></li></ul>
+</article>
+<article class="cmd" data-cat="music" data-search="/queue view show what is playing and the next songs in the queue. only you see it. anyone in the server can look.">
+  <header><button class="cmd-name" type="button" data-copy="/queue view" title="Copy">/queue view</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Show what is playing and the next songs in the queue. Only you see it. Anyone in the server can look.</p>
+</article>
+<article class="cmd" data-cat="music" data-search="/queue remove remove one song from the queue by its position. position 1 is the song that plays next. you need to be in the voice channel, or be an admin. position position in the queue (1 = next up)">
+  <header><button class="cmd-name" type="button" data-copy="/queue remove" title="Copy">/queue remove</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Remove one song from the queue by its position. Position 1 is the song that plays next. You need to be in the voice channel, or be an admin.</p><ul class="args"><li><code class="arg req">position</code><span>Position in the queue (1 = next up)</span></li></ul>
+</article>
+<article class="cmd" data-cat="music" data-search="/queue clear empty the queue. the current song keeps playing. you need to be in the voice channel, or be an admin.">
+  <header><button class="cmd-name" type="button" data-copy="/queue clear" title="Copy">/queue clear</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
+  <p>Empty the queue. The current song keeps playing. You need to be in the voice channel, or be an admin.</p>
 </article></div></section>
 <section class="cmd-group" data-group="games"><h2><span aria-hidden="true">🎲</span> Games <small>3</small></h2><div class="cmd-grid"><article class="cmd" data-cat="games" data-search="/game aether coin games: open the game hub, or jump straight into a game. run it on its own to open the game hub: your balance, a line about each game and a button per game. press one, type your bet, and play. games: blackjack, slots, poker, higher or lower, coin toss, trivia and connect four. every result shows your new balance, with same bet, double and quit buttons for a minute. only you can press your buttons. play money only. game skip the hub and start this game bet bet in aether coins (asked for if you pick a game without one)">
   <header><button class="cmd-name" type="button" data-copy="/game" title="Copy">/game</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>

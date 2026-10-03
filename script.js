@@ -84,4 +84,31 @@
   }
   openHash();
   window.addEventListener("hashchange", openHash);
+  // theme: Dark (default) / Light / Auto. Saved only in this browser (localStorage). The head script applies it before first paint.
+  (function () {
+    const root = document.documentElement;
+    const KEY = "aeth-theme";
+    const ORDER = ["dark", "light", "auto"];
+    const mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+    const read = () => { let v = "dark"; try { v = localStorage.getItem(KEY) || v; } catch (e) {} return ORDER.includes(v) ? v : "dark"; };
+    const apply = (pref) => {
+      const eff = pref === "auto" ? (mq && mq.matches ? "light" : "dark") : pref;
+      root.setAttribute("data-theme-pref", pref);
+      root.setAttribute("data-theme", eff);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", eff === "light" ? "#f5f7fb" : "#0b0d14");
+      document.querySelectorAll("[data-theme-set]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeSet === pref)));
+      const names = { dark: "Dark", light: "Light", auto: "Auto" };
+      document.querySelectorAll("[data-theme-cycle]").forEach((b) => { b.setAttribute("aria-label", "Theme: " + names[pref] + ". Change theme"); b.title = "Theme: " + names[pref]; });
+    };
+    const save = (pref) => { try { localStorage.setItem(KEY, pref); } catch (e) {} apply(pref); };
+    document.addEventListener("click", (e) => {
+      const set = e.target.closest("[data-theme-set]");
+      if (set) { save(set.dataset.themeSet); return; }
+      if (e.target.closest("[data-theme-cycle]")) save(ORDER[(ORDER.indexOf(read()) + 1) % ORDER.length]);
+    });
+    if (mq) { const f = () => { if (read() === "auto") apply("auto"); }; mq.addEventListener ? mq.addEventListener("change", f) : mq.addListener(f); }
+    window.addEventListener("storage", (e) => { if (e.key === KEY) apply(read()); });
+    apply(read());
+  })();
 })();

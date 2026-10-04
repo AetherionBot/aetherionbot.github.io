@@ -126,8 +126,8 @@
         <h3>Voice channels</h3>
         <p>When someone runs <code>/voice</code> (to join) or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
 
-        <h3>Image, video and speech generation</h3>
-        <p>When you ask for an image, video, image edit, or speech (<code>/audio</code> or “Read aloud”), your prompt or text and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the monthly media limits (1 image per person per month, 30 images and 10 videos per server per month), it counts how many generations each server has used this month, and how many images each person (by Discord user ID) has made in that server this month. Separate daily counts of AI replies (20 per person and 500 per server per day) are kept to enforce the daily AI reply limits.</p>
+        <h3>Image and video generation</h3>
+        <p>When you ask for an image, video or image edit, your prompt and any reference images are sent to xAI. Reference images can include profile pictures of members you ask about and the server’s custom emoji. The result is posted in the channel. Aetherion does not keep a library of generated media; temporary audio files used for voice playback can remain on the server until it restarts. To enforce the monthly media limits (2 per person per month and 15 per server per month, images and videos together), it counts how many generations each server has used this month, and how many each person (by Discord user ID) has made in that server this month. Separate daily counts of AI replies (20 per person and 200 per server per day) are kept to enforce the daily AI reply limits.</p>
 
         <h3>Aether Coins and games</h3>
         <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins daily</code> and your current daily streak, and when your wallet was created. Game rounds themselves are held in memory only.</p>
@@ -144,8 +144,8 @@
         <h3>Server settings</h3>
         <p>Settings that server administrators choose (welcome channel, auto-role, reaction roles, date channel, and log channel and events), plus a list of the servers Aetherion is in (ID, name and member count) for my status view. Aetherion also counts how often each custom server emoji is used and stores a short AI-written description of it.</p>
 
-        <h3>Welcome banners</h3>
-        <p>If a server turns on welcome banners, a new member’s profile picture is sent to xAI to describe it and create a matching background, and their display name is drawn on the banner. The banner is posted in the server’s welcome channel and not stored by Aetherion.</p>
+        <h3>Welcome cards</h3>
+        <p>New members get a welcome card drawn by Aetherion itself with their display name and, if available, their profile picture. Nothing is sent to xAI for it, and the card is posted in the server’s welcome channel and not stored by Aetherion.</p>
 
         <h3>Server logs</h3>
         <p>If administrators turn on <code>/setup logs</code>, Aetherion posts events to the channel they pick: joins and leaves, kicks, bans, timeouts, nickname, role and avatar changes, voice channel joins, moves and mute changes, posted invite links, message edits and deletions (including the earlier text when Discord still has it), and channel, role, emoji and server changes. These entries live in that Discord channel. Aetherion only stores the log settings.</p>

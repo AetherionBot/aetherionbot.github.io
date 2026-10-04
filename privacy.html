@@ -83,7 +83,7 @@
         <h2>The short version</h2>
         <ul>
           <li>Aetherion reads messages in the channels it can see so it can reply and follow the conversation. In servers with Premium, and in channels where the server has not switched the AI off, it keeps the most recent 150 messages per channel (the first 280 characters of each) for up to 3 days, then deletes them. In servers without Premium it does not keep message text. If you delete a message on Discord, Aetherion deletes its saved copy too.</li>
-          <li>When you talk to Aetherion, send it a voice message, or speak to it in a voice channel, your words, images and audio are sent to xAI (the company behind Grok) to produce the answer.</li>
+          <li>When you talk to Aetherion or speak to it in a voice channel, your words, images and audio are sent to xAI (the company behind Grok) to produce the answer.</li>
           <li>Aether Coin wallets, activity stats (message counts, voice time, XP) and server settings are kept until they are deleted.</li>
           <li>Aetherion does not record or save voice audio.</li>
           <li>The bot never asks for or stores payment details. Premium is paid through PayPal, which shares your name, email, the amount and your note with me. The bot only keeps a small Premium record for each server.</li>
@@ -119,9 +119,6 @@
 
         <h3>When you talk to Aetherion</h3>
         <p>When you mention Aetherion, reply to it, or address it by name, it gathers what it needs to answer: your message and display name, images you attach or point to, the text of small text-file attachments, the message you are replying to and earlier messages in that reply chain (which may be written by other people), and a few recent lines between you and the bot in that channel. This is sent to xAI to generate the reply (see <a href="#third-parties">Third parties</a>).</p>
-
-        <h3>Voice messages and audio files</h3>
-        <p>Aetherion only transcribes a Discord voice message or audio file when it is sent to the bot: a reply to one of Aetherion’s messages, a message that @mentions Aetherion (or its role), or one that uses its name in the text. It then downloads the clip, sends it to xAI to be transcribed, and posts a reply that quotes the transcript, with a spoken version. Other voice messages and audio files are not downloaded, transcribed or sent to xAI; the short channel history only notes that a voice message was posted (“[voice message]”, plus any text you typed with it). The clip itself is not saved by Aetherion.</p>
 
         <h3>Voice channels</h3>
         <p>When someone runs <code>/voice</code> (to join) or <code>/play</code>, Aetherion joins their voice channel and listens only to the person who ran the command; other people’s audio is ignored. That person’s speech is cut into short clips (a few seconds each), and each clip is sent to xAI for transcription before Aetherion checks for its name; it only answers when the transcript contains its name. Silence, very short sounds (such as a cough or a one-word “ok”) and near-silent noise are skipped on the bot’s side and not sent. Audio is not recorded or saved to disk. The last 10 voice exchanges with each person are kept in memory for follow-up questions and are cleared whenever the bot restarts.</p>
@@ -205,7 +202,7 @@
               <tr><td>Channel message history</td><td>Only in servers with Premium (and channels the AI may answer in). Up to 3 days, and only the latest 150 messages per channel. Messages older than 3 days are deleted automatically, and older ones also drop off sooner as new messages come in. Deleting a message on Discord also deletes Aetherion’s saved copy. Deleting a channel or removing Aetherion from a server deletes that channel’s saved messages.</td></tr>
               <tr><td>Channel summary</td><td>One per channel, replaced when a new one is made, and deleted after 3 days.</td></tr>
               <tr><td>Voice conversation memory</td><td>Last 10 exchanges per person, in memory only. Cleared when the bot restarts.</td></tr>
-              <tr><td>Voice audio and voice messages</td><td>Not saved. Processed and discarded.</td></tr>
+              <tr><td>Voice audio</td><td>Not saved. Processed and discarded.</td></tr>
               <tr><td>Aether Coin wallets</td><td>Until deleted on request or the service shuts down.</td></tr>
               <tr><td>Activity stats (messages, voice time, XP)</td><td>Until deleted on request or the service shuts down.</td></tr>
               <tr><td>Premium records</td><td>Until deleted on request or the service shuts down. Records stay after Premium ends so renewals pick up where they left off.</td></tr>
@@ -229,7 +226,7 @@
         <p>The server owner can run <code>/forgetme</code> in their server to erase the saved channel messages and summaries, conversation memory (including voice turns) and activity stats for that server, after a confirmation. It keeps Premium records, server settings, usage counters and Aether Coin wallets. For anything else, to see or delete your data, message me through my <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Discord profile</a> with your Discord user ID and what you would like removed (for example, your messages in the bot’s history, your coin wallet, or your activity stats). I will delete it and let you know when it is done. Server administrators can ask me to remove all of a server’s data the same way, including its Premium record (deleting it while Premium is active ends Premium for that server).</p>
         <p>You can also limit what Aetherion sees:</p>
         <ul>
-          <li>Don’t mention Aetherion, reply to it or use its name in messages, voice messages or audio files you don’t want it to process.</li>
+          <li>Don’t mention Aetherion, reply to it or use its name in messages you don’t want it to process.</li>
           <li>Don’t use <code>/voice</code> (to join) or <code>/play</code> if you don’t want your speech transcribed.</li>
           <li>Server administrators can use Discord permissions to keep Aetherion out of specific channels, or remove it from the server.</li>
         </ul>

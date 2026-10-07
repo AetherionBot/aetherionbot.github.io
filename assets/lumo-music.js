@@ -5,7 +5,7 @@
    - Gapless loop through the Web Audio API; soft volume with a slow fade-in.
    - Same-origin links (and, on the dashboard, form posts) load with fetch and swap <body>, so the
      page never unloads. Anything else (external links, login/logout, downloads, modifier clicks)
-     navigates normally. Config: data-src, data-exclude (path regex), data-forms="1", data-volume, data-fade on the script tag. */
+     navigates normally. Config: data-slot / data-slot-in / data-slot-mq (top-bar spot on small screens), data-src, data-exclude (path regex), data-forms="1", data-volume, data-fade on the script tag. */
 (function () {
   "use strict";
   if (window.LumoMusic) { return; }
@@ -88,8 +88,19 @@
       btn.addEventListener("click", function (ev) { ev.preventDefault(); ev.stopPropagation(); toggle(); });
       paint();
     }
-    if (!btn.isConnected) { document.body.appendChild(btn); }
+    // On small screens it sits in the top bar (next to the menu button) so it never covers the page.
+    var slot = null, box = null;
+    if (SLOT_MQ && SLOT_MQ.matches) {
+      slot = ds.slot ? document.querySelector(ds.slot) : null;
+      box = !slot && ds.slotIn ? document.querySelector(ds.slotIn) : null;
+    }
+    btn.classList.toggle("in-bar", !!(slot || box));
+    if (slot) { if (btn.nextSibling !== slot) { slot.parentNode.insertBefore(btn, slot); } }
+    else if (box) { if (btn.parentNode !== box) { box.appendChild(btn); } }
+    else if (btn.parentNode !== document.body) { document.body.appendChild(btn); }
   }
+  var SLOT_MQ = (ds.slot || ds.slotIn) && window.matchMedia ? window.matchMedia(ds.slotMq || "(max-width: 960px)") : null;
+  if (SLOT_MQ) { var onMq = function () { if (btn) { mountButton(); } }; if (SLOT_MQ.addEventListener) { SLOT_MQ.addEventListener("change", onMq); } else { SLOT_MQ.addListener(onMq); } }
 
   // first tap / key anywhere starts the music (not on the toggle itself: its click decides)
   var firstDone = false;

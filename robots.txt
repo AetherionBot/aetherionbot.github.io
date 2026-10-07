@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aetherionbot.github.io/sitemap.xml
+Sitemap: https://lumobot.org/sitemap.xml

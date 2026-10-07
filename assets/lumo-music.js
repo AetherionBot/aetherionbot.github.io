@@ -37,10 +37,44 @@
       el._fade = setInterval(function () { i++; el.volume = from + (v - from) * (i / steps); if (i >= steps) { clearInterval(el._fade); } }, 50);
     }
   }
-  function useElement() {  // fallback when Web Audio is missing or the decode fails
+  var seam = null;
+  // First and last non-silent sample (the track itself has no silence: it has a crossfade baked in).
+  function edges(buf) {
+    var th = 1e-4, n = buf.length, first = n, last = 0, c, d, i;
+    for (c = 0; c < buf.numberOfChannels; c++) {
+      d = buf.getChannelData(c);
+      for (i = 0; i < first && i < n; i++) { if (d[i] > th || d[i] < -th) { first = i; break; } }
+      for (i = n - 1; i > last; i--) { if (d[i] > th || d[i] < -th) { last = i; break; } }
+    }
+    if (first >= last) { return [0, buf.duration]; }
+    return [first / buf.sampleRate, (last + 1) / buf.sampleRate];
+  }
+  // Fallback without Web Audio: two <audio> elements that crossfade near the end, so there is no gap.
+  var pair = [], cur = 0, level = 0, xfTimer = null, XF = 1.2;
+  function elVolume() { return Math.max(0, Math.min(1, level)); }
+  function useElement() {
     if (el) { return; }
-    el = new Audio(SRC); el.loop = true; el.volume = 0; el.preload = "auto";
+    for (var k = 0; k < 2; k++) { var a = new Audio(SRC); a.preload = "auto"; a.volume = 0; pair.push(a); }
+    el = { play: function () { var p = pair[cur].play(); watch(); return p; },
+           pause: function () { pair.forEach(function (a) { a.pause(); }); clearInterval(xfTimer); },
+           get currentTime() { return pair[cur].currentTime; },
+           get volume() { return level; },
+           set volume(v) { level = v; var a = pair[cur], b = pair[1 - cur]; if (!a._xf) { a.volume = elVolume(); } if (!b._xf && b.paused) { b.volume = 0; } } };
     el.play().then(function () { fadeTo(VOL, FADE); }).catch(function () { playing = false; paint(); });
+  }
+  function watch() {
+    clearInterval(xfTimer);
+    xfTimer = setInterval(function () {
+      var a = pair[cur], b = pair[1 - cur];
+      if (!a.duration || a._xf || a.currentTime < a.duration - XF) { return; }
+      a._xf = true; b.currentTime = 0; b.volume = 0; b.play();
+      var t0 = Date.now();
+      var step = setInterval(function () {
+        var k = Math.min(1, (Date.now() - t0) / (XF * 1000));
+        b.volume = elVolume() * Math.sin(k * Math.PI / 2); a.volume = elVolume() * Math.cos(k * Math.PI / 2);
+        if (k >= 1) { clearInterval(step); a.pause(); a._xf = false; cur = 1 - cur; }
+      }, 40);
+    }, 100);
   }
   function start() {  // call from inside a tap/key handler (iOS needs that)
     playing = true; paint();
@@ -55,7 +89,11 @@
       fetch(SRC).then(function (r) { if (!r.ok) { throw new Error("audio " + r.status); } return r.arrayBuffer(); })
         .then(function (b) { return new Promise(function (ok, bad) { ctx.decodeAudioData(b, ok, bad); }); })
         .then(function (buf) {
-          var s = ctx.createBufferSource(); s.buffer = buf; s.loop = true; s.connect(gain); s.start(0);
+          var edge = edges(buf);
+          var s = ctx.createBufferSource(); s.buffer = buf; s.loop = true;
+          s.loopStart = edge[0]; s.loopEnd = edge[1];  // skip any decoder/encoder padding, so the loop has no gap
+          s.connect(gain); s.start(0, edge[0]);
+          seam = { start: edge[0], end: edge[1], duration: buf.duration };
           if (playing) { fadeTo(VOL, FADE); }
         })
         .catch(function () { ctx = null; gain = null; useElement(); });
@@ -69,7 +107,27 @@
     fadeTo(0, 0.4);
     setTimeout(function () { if (playing) { return; } if (ctx && ctx.suspend) { ctx.suspend(); } if (el) { el.pause(); } }, 450);
   }
+  // Leaving (tab hidden, app backgrounded, phone locked, page closing, an off-site link): pause without
+  // changing the saved choice; coming back resumes only if it was playing and is not turned off.
+  var away = false;
+  function leave() {
+    if (!playing) { return; }
+    away = true; playing = false; paint();
+    if (gain && ctx) { fadeTo(0, 0.15); setTimeout(function () { if (!playing && ctx && ctx.suspend) { ctx.suspend(); } }, 160); }
+    if (el) { el.pause(); }
+  }
+  function back() {
+    if (!away || document.visibilityState === "hidden") { return; }
+    away = false;
+    if (pref() !== "off") { start(); }
+  }
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") { leave(); } else { back(); } });
+  window.addEventListener("pagehide", leave);
+  window.addEventListener("pageshow", function (e) { if (e.persisted) { back(); } });
+  window.addEventListener("focus", back);
+
   function toggle() {
+    away = false;
     if (playing) { stop(); setPref("off"); } else { setPref("on"); start(); }
   }
   function paint() {
@@ -99,7 +157,7 @@
     else if (box) { if (btn.parentNode !== box) { box.appendChild(btn); } }
     else if (btn.parentNode !== document.body) { document.body.appendChild(btn); }
   }
-  var SLOT_MQ = (ds.slot || ds.slotIn) && window.matchMedia ? window.matchMedia(ds.slotMq || "(max-width: 960px)") : null;
+  var SLOT_MQ = (ds.slot || ds.slotIn) && window.matchMedia ? window.matchMedia(ds.slotMq || "all") : null;
   if (SLOT_MQ) { var onMq = function () { if (btn) { mountButton(); } }; if (SLOT_MQ.addEventListener) { SLOT_MQ.addEventListener("change", onMq); } else { SLOT_MQ.addListener(onMq); } }
 
   // first tap / key anywhere starts the music (not on the toggle itself: its click decides)
@@ -193,7 +251,7 @@
     var a = ev.target.closest && ev.target.closest("a[href]");
     if (!a || a.hasAttribute("download") || (a.target && a.target !== "_self") || a.hasAttribute("data-no-swap")) { return; }
     var url = new URL(a.href, location.href);
-    if (!internal(url)) { return; }
+    if (!internal(url)) { if (/^https?:$/.test(url.protocol)) { leave(); } return; }  // leaving the site in this tab
     if (url.pathname === location.pathname && url.search === location.search && url.hash) { return; }  // same-page anchor
     ev.preventDefault();
     go(url.href, true);
@@ -232,6 +290,7 @@
     get playing() { return playing; },
     get paused() { return !playing; },
     get currentTime() { return ctx ? ctx.currentTime : (el ? el.currentTime : 0); },
-    navigate: function (u) { return go(u, true); }
+    navigate: function (u) { return go(u, true); },
+    get seam() { return seam; }
   };
 })();

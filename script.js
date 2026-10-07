@@ -1,4 +1,4 @@
-// Aetherion showcase: command search/filter, click-to-copy, scroll reveal. No dependencies, no tracking.
+// Lumo showcase: command search/filter, click-to-copy, scroll reveal. No dependencies, no tracking.
 (function () {
   const toast = document.getElementById("toast");
   let timer;

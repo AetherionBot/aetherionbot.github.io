@@ -88,7 +88,7 @@
   (function () {
     const root = document.documentElement;
     const KEY = "aeth-theme";
-    const ORDER = ["dark", "light", "auto"];
+    const ORDER = ["dark", "light", "auto"];  // valid choices
     const mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
     const read = () => { let v = "dark"; try { v = localStorage.getItem(KEY) || v; } catch (e) {} return ORDER.includes(v) ? v : "dark"; };
     const apply = (pref) => {
@@ -99,14 +99,27 @@
       if (meta) meta.setAttribute("content", eff === "light" ? "#f5f7fb" : "#0b0d14");
       document.querySelectorAll("[data-theme-set]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeSet === pref)));
       const names = { dark: "Dark", light: "Light", auto: "Auto" };
-      document.querySelectorAll("[data-theme-cycle]").forEach((b) => { b.setAttribute("aria-label", "Theme: " + names[pref] + ". Change theme"); b.title = "Theme: " + names[pref]; });
+      document.querySelectorAll("[data-theme-menu]").forEach((b) => { b.setAttribute("aria-label", "Appearance: " + names[pref] + ". Theme and seasonal options"); b.title = "Appearance: " + names[pref]; });
     };
     const save = (pref) => { try { localStorage.setItem(KEY, pref); } catch (e) {} apply(pref); };
+    // the top-bar button opens a small menu: Appearance (Dark / Light / Auto) and Seasonal (lumo-holiday.js handles those buttons)
+    const pop = (open, focusBtn) => {
+      document.querySelectorAll("[data-theme-menu]").forEach((b) => {
+        const m = document.getElementById(b.getAttribute("aria-controls"));
+        if (!m) return;
+        m.hidden = !open;
+        b.setAttribute("aria-expanded", String(open));
+        if (!open && focusBtn) b.focus();
+      });
+    };
     document.addEventListener("click", (e) => {
       const set = e.target.closest("[data-theme-set]");
       if (set) { save(set.dataset.themeSet); return; }
-      if (e.target.closest("[data-theme-cycle]")) save(ORDER[(ORDER.indexOf(read()) + 1) % ORDER.length]);
+      const btn = e.target.closest("[data-theme-menu]");
+      if (btn) { pop(btn.getAttribute("aria-expanded") !== "true"); return; }
+      if (!e.target.closest(".theme-menu")) pop(false);
     });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && document.querySelector('[data-theme-menu][aria-expanded="true"]')) pop(false, true); });
     if (mq) { const f = () => { if (read() === "auto") apply("auto"); }; mq.addEventListener ? mq.addEventListener("change", f) : mq.addListener(f); }
     window.addEventListener("storage", (e) => { if (e.key === KEY) apply(read()); });
     apply(read());

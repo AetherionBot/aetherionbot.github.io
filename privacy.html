@@ -131,8 +131,8 @@
         <p>For each player: your user ID, coin balance, any bet in progress, the date you last claimed your daily bonus with <code>/coins daily</code> and your current daily streak, and when your wallet was created. Game rounds themselves are held in memory only.</p>
 
         <h3>Activity, levels and ranks</h3>
-        <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and your XP and level, plus the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
-        <p>In servers that turn on Levels, Lumo also keeps a separate XP count for each member in that server (just the number, never what you wrote); <code>/forgetme</code> erases it.</p>
+        <p>For each member in each server: how many messages you have sent (in total and per channel), how long you have spent in voice channels, and the date tracking began for that server. This powers <code>/profile</code> and <code>/top</code>. Message content is not part of these stats.</p>
+        <p>Lumo also keeps one XP count for each member in every server (just the number, never what you wrote). It gives your level on <code>/rank</code>, <code>/profile</code> and <code>/top</code>. <code>/forgetme</code> erases it.</p>
 
         <h3>Giveaways and polls</h3>
         <p>When a server runs a giveaway, Lumo saves the prize, the end time, the required role (if any), who started it, and the Discord user IDs of the people who pressed Enter, plus the winners. For a poll it saves the question, the options, the end time, who started it and, for each person who voted, their Discord user ID and which option(s) they picked. Votes are only used to count; the poll and the web dashboard show totals, never who voted for what. Finished giveaways and polls are removed after 30 days (and only the latest 25 finished ones per server are kept). No AI is involved.</p>

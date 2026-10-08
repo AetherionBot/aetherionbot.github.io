@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lumo Dashboard (beta)</title>
-  <meta name="description" content="The Lumo web dashboard (beta): log in with Discord to check your server&#x27;s setup, change welcome, logs and the join role, manage reaction roles, Customize, giveaways and polls, choose where the AI answers, and see usage. Open to anyone who manages a server Lumo is in.">
+  <title>Lumo status: is Lumo online?</title>
+  <meta name="description" content="Is Lumo online right now? Live status of the Lumo Discord bot: Discord connection, AI chat, music and the dashboard, with the current ping and the last restart.">
   <meta name="theme-color" content="#0b0d14">
   <meta name="color-scheme" content="dark">
-  <link rel="canonical" href="https://lumobot.org/dashboard.html">
+  <link rel="canonical" href="https://lumobot.org/status.html">
   <meta property="og:site_name" content="Lumo AI">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lumobot.org/dashboard.html">
-  <meta property="og:title" content="Lumo Dashboard (beta)">
-  <meta property="og:description" content="The Lumo web dashboard (beta): log in with Discord to check your server&#x27;s setup, change welcome, logs and the join role, manage reaction roles, Customize, giveaways and polls, choose where the AI answers, and see usage. Open to anyone who manages a server Lumo is in.">
+  <meta property="og:url" content="https://lumobot.org/status.html">
+  <meta property="og:title" content="Lumo status">
+  <meta property="og:description" content="Is Lumo online right now? Live status, checked every time you open the page.">
   <meta property="og:image" content="https://lumobot.org/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Lumo: the robot mascot waving beside the Lumo name and the tagline AI-powered all-in-one Discord bot">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lumo Dashboard (beta)">
-  <meta name="twitter:description" content="The Lumo web dashboard (beta): log in with Discord to check your server&#x27;s setup, change welcome, logs and the join role, manage reaction roles, Customize, giveaways and polls, choose where the AI answers, and see usage. Open to anyone who manages a server Lumo is in.">
+  <meta name="twitter:title" content="Lumo status">
+  <meta name="twitter:description" content="Is Lumo online right now? Live status, checked every time you open the page.">
   <meta name="twitter:image" content="https://lumobot.org/og-image.png">
   <meta name="twitter:image:alt" content="Lumo: the robot mascot waving beside the Lumo name and the tagline AI-powered all-in-one Discord bot">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -48,7 +48,7 @@
         <a href="commands.html">Commands</a>
         <a href="premium.html">Premium</a>
         <a href="faq.html">FAQ</a>
-        <a href="dashboard.html" aria-current="page">Dashboard <span class="beta-chip">Beta</span></a>
+        <a href="dashboard.html">Dashboard <span class="beta-chip">Beta</span></a>
         </div>
         <div class="theme-pop"><button type="button" class="theme-btn" data-theme-menu aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Appearance and seasonal theme" title="Appearance"><svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ti ti-auto" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg></button><div class="theme-menu" id="theme-menu" hidden><div class="theme-seg-wrap"><span>Appearance</span><div class="theme-seg" role="group" aria-label="Color theme"><button type="button" class="seg-b" data-theme-set="dark" aria-pressed="false"><svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><span>Dark</span></button><button type="button" class="seg-b" data-theme-set="light" aria-pressed="false"><svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span>Light</span></button><button type="button" class="seg-b" data-theme-set="auto" aria-pressed="false"><svg class="ti ti-auto" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg><span>Auto</span></button></div></div><div class="theme-seg-wrap"><span>Seasonal <small data-holiday-now></small></span><div class="hol-grid" role="group" aria-label="Seasonal theme"><button type="button" class="hol-b hol-auto" data-holiday-set="auto" aria-pressed="false"><svg class="hi" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Auto</span></button><button type="button" class="hol-b hol-off" data-holiday-set="off" aria-pressed="false"><svg class="hi" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 18 18 6"/></svg><span>Off</span></button><button type="button" class="hol-b hol-halloween" data-holiday-set="halloween" aria-pressed="false"><span class="he" aria-hidden="true">🎃</span><span>Halloween</span></button><button type="button" class="hol-b hol-thanksgiving" data-holiday-set="thanksgiving" aria-pressed="false"><span class="he" aria-hidden="true">🦃</span><span>Thanksgiving</span></button><button type="button" class="hol-b hol-christmas" data-holiday-set="christmas" aria-pressed="false"><span class="he" aria-hidden="true">🎄</span><span>Christmas</span></button></div></div></div></div>
         <a class="btn btn-ghost btn-sm nav-dash" href="https://dashboard.lumobot.org" target="_blank" rel="noopener">Open dashboard <span class="beta-chip">Beta</span></a>
@@ -61,7 +61,7 @@
           <a href="commands.html">Commands</a>
           <a href="premium.html">Premium</a>
           <a href="faq.html">FAQ</a>
-          <a href="dashboard.html" aria-current="page">About the dashboard <span class="beta-chip">Beta</span></a>
+          <a href="dashboard.html">About the dashboard <span class="beta-chip">Beta</span></a>
           <a class="btn btn-ghost nav-panel-dash" href="https://dashboard.lumobot.org" target="_blank" rel="noopener">Open dashboard <span class="beta-chip">Beta</span></a>
             <a class="btn btn-primary nav-panel-add" href="https://discord.com/oauth2/authorize?client_id=1545140271073722378&amp;permissions=309576723664&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Add to Discord</a>
             <div class="theme-seg-wrap"><span>Appearance</span><div class="theme-seg" role="group" aria-label="Color theme"><button type="button" class="seg-b" data-theme-set="dark" aria-pressed="false"><svg class="ti ti-dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><span>Dark</span></button><button type="button" class="seg-b" data-theme-set="light" aria-pressed="false"><svg class="ti ti-light" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span>Light</span></button><button type="button" class="seg-b" data-theme-set="auto" aria-pressed="false"><svg class="ti ti-auto" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg><span>Auto</span></button></div></div><div class="theme-seg-wrap"><span>Seasonal <small data-holiday-now></small></span><div class="hol-grid" role="group" aria-label="Seasonal theme"><button type="button" class="hol-b hol-auto" data-holiday-set="auto" aria-pressed="false"><svg class="hi" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Auto</span></button><button type="button" class="hol-b hol-off" data-holiday-set="off" aria-pressed="false"><svg class="hi" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M6 18 18 6"/></svg><span>Off</span></button><button type="button" class="hol-b hol-halloween" data-holiday-set="halloween" aria-pressed="false"><span class="he" aria-hidden="true">🎃</span><span>Halloween</span></button><button type="button" class="hol-b hol-thanksgiving" data-holiday-set="thanksgiving" aria-pressed="false"><span class="he" aria-hidden="true">🦃</span><span>Thanksgiving</span></button><button type="button" class="hol-b hol-christmas" data-holiday-set="christmas" aria-pressed="false"><span class="he" aria-hidden="true">🎄</span><span>Christmas</span></button></div></div>
@@ -72,37 +72,52 @@
   </header>
 
   <main id="main">
-    <header class="page-hero">
+    <header class="page-hero st-hero" data-st="checking" data-view="checking" data-sub="checking">
       <div class="wrap page-hero-inner">
-        <img class="hero-pose" src="assets/robot/working-320.webp" alt="Lumo the robot typing on a laptop" width="112" height="112" fetchpriority="high" decoding="async">
-        <span class="kicker">Beta</span>
-        <h1>Lumo <span class="grad">Dashboard</span></h1>
-        <p class="lead">A web page where server managers can check their Lumo setup and change it, without typing a command.</p>
+        <span class="kicker">Status</span>
+        <div class="st-bot">
+          <img class="st-pose st-pose-checking" src="assets/robot/thinking-256.webp" alt="Lumo the robot thinking" width="120" height="120" fetchpriority="high" decoding="async">
+          <img class="st-pose st-pose-online" src="assets/robot/thumbsup-256.webp" alt="Lumo the robot giving a thumbs up" width="120" height="120" decoding="async">
+          <img class="st-pose st-pose-partial" src="assets/robot/thinking-256.webp" alt="Lumo the robot thinking" width="120" height="120" decoding="async">
+          <img class="st-pose st-pose-offline" src="assets/robot/sleeping-96.webp" alt="Lumo the robot asleep" width="96" height="96" decoding="async">
+          <img class="st-pose st-pose-starting" src="assets/robot/working-320.webp" alt="Lumo the robot getting to work" width="120" height="120" decoding="async">
+        </div>
+        <h1 class="st-line" aria-live="polite">
+          <span class="st-dot" aria-hidden="true"></span>
+          <span class="st-t st-t-checking">Checking Lumo…</span>
+          <span class="st-t st-t-online">Lumo is <span class="st-word">online</span></span>
+          <span class="st-t st-t-partial">Lumo is <span class="st-word">partly down</span></span>
+          <span class="st-t st-t-offline">Lumo is <span class="st-word">offline</span></span>
+          <span class="st-t st-t-starting">Lumo is <span class="st-word">starting</span></span>
+        </h1>
+        <p class="lead st-sub">
+          <span class="st-s st-s-checking">Asking Lumo how it's doing.</span>
+          <span class="st-s st-s-ok">Everything is working: commands, music and AI chat.</span>
+          <span class="st-s st-s-ai">Most things work, but AI chat is having trouble and may be slow.</span>
+          <span class="st-s st-s-music">Most things work, but music is having trouble and may not start.</span>
+          <span class="st-s st-s-both">Commands work, but AI chat and music are having trouble right now.</span>
+          <span class="st-s st-s-down">Lumo can't reach Discord right now. It usually comes back on its own within a few minutes.</span>
+          <span class="st-s st-s-starting">Lumo is starting up and connecting to Discord. It should be back in a minute or two.</span>
+        </p>
+        <div class="st-facts">
+          <span class="ls-chip"><img class="ls-ico" src="assets/robot/fire-96.webp" alt="" width="26" height="26" decoding="async"><span>Ping</span> <b class="st-ping">—</b></span>
+          <span class="ls-chip"><img class="ls-ico" src="assets/robot/happy-96.webp" alt="" width="26" height="26" decoding="async"><span class="st-since-l">Online since</span> <b class="st-since">—</b></span>
+        </div>
+        <p class="st-check"><span class="st-checked" aria-live="polite">Last checked <b>checking…</b></span><button type="button" class="btn btn-ghost btn-sm st-refresh"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg> Refresh</button></p>
       </div>
     </header>
 
-    <section class="section section-tight" id="dashboard">
-      <div class="wrap wrap-mid">
-        <div class="beta-notice" role="note">
-          <span class="badge b-premium">Beta</span>
-          <p><strong>The Lumo Dashboard is in beta.</strong></p>
-          <p>Anyone who manages a server Lumo is in can log in with Discord. You only see servers where you have Manage Server or Administrator and Lumo is present. Everything in Lumo keeps working in Discord with slash commands too.</p>
-        </div>
+    <section class="section st-sec">
+      <div class="wrap st-wrap">
+        <h2 class="st-h">Parts of Lumo</h2>
+        <ul class="st-parts">
+          <li><span class="st-ico" aria-hidden="true">🛰️</span><span class="st-name"><b>Discord</b><small>Commands, buttons and replies</small></span><span class="st-pill is-checking" data-part="discord"></span></li>
+          <li><span class="st-ico" aria-hidden="true">✨</span><span class="st-name"><b>AI chat</b><small>Chat, vision and voice (Premium)</small></span><span class="st-pill is-checking" data-part="ai"></span></li>
+          <li><span class="st-ico" aria-hidden="true">🎵</span><span class="st-name"><b>Music</b><small>SoundCloud in voice channels</small></span><span class="st-pill is-checking" data-part="music"></span></li>
+          <li><span class="st-ico" aria-hidden="true">🧭</span><span class="st-name"><b>Dashboard</b><small>dashboard.lumobot.org</small></span><span class="st-pill is-checking" data-part="dashboard"></span></li>
+        </ul>
 
-        <h2 class="db-h">What it does</h2>
-        <div class="info-grid">
-          <article class="info-card"><h3>Setup checklist</h3><p>The same checklist as <code>/setup status</code>: what is set up, what to fix next and the command that fixes it, including the Void bait channel.</p></article>
-          <article class="info-card"><h3>Usage and plan</h3><p>This month's images and videos, today's AI replies out of the daily limit, Premium status and expiry, and the house wallet.</p></article>
-          <article class="info-card"><h3>Change settings</h3><p>Managers can set the welcome channel, change the welcome card and message (with a live preview), and set the join role and server logs. Void is set in Discord with <code>/setup void</code>, and the checklist shows if it is on. Administrators manage reaction roles and color roles. With Premium, managers can customize the bot's name, personality and avatar.</p></article>
-          <article class="info-card"><h3>Giveaways and polls</h3><p>Administrators can start a giveaway or a poll with a channel picker, see what is running, and end, reroll, cancel or close it. They are the same giveaways and polls as <code>/giveaway</code> and <code>/poll</code>.</p></article>
-          <article class="info-card"><h3>AI channels</h3><p>Managers choose where Lumo's AI chat answers: everywhere (the default), only in some channels, or everywhere except some. A channel can also get its own tone, or answer only when someone mentions it or replies to it. Threads follow their channel.</p></article>
-          <article class="info-card"><h3>Safe by design</h3><p>Sign in with Discord. It only asks who you are and which servers you manage. You only see servers you manage, and every change is checked again on the server and logged.</p></article>
-        </div>
-
-        <div class="db-open">
-          <div class="cta center"><a class="btn btn-primary" href="https://dashboard.lumobot.org" target="_blank" rel="noopener">Open dashboard <span class="db-tag">beta</span></a></div>
-          <p class="db-note">Opens the beta dashboard on another site.</p>
-        </div>
+        <p class="st-note"><span>This page checks Lumo live every time you open it.</span> <span>Something not working? <a href="https://discord.gg/KZjebts36C" target="_blank" rel="noopener">Tell us on Discord</a>.</span></p>
       </div>
     </section>
   </main>
@@ -124,7 +139,7 @@
           <a href="faq.html">FAQ</a>
           <a href="changelog.html">Changelog</a>
           <a href="https://dashboard.lumobot.org" target="_blank" rel="noopener">Open dashboard <span class="beta-chip">Beta</span></a>
-          <a href="dashboard.html" aria-current="page">About the dashboard</a>
+          <a href="dashboard.html">About the dashboard</a>
         </div>
         <div>
           <h2>Support</h2>
@@ -132,7 +147,7 @@
           <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message Ori on Discord</a>
           <a href="faq.html#redeem">Redeem a code</a>
           <a href="faq.html#permissions">Permissions explained</a>
-          <a href="status.html">Status</a>
+          <a href="status.html" aria-current="page">Status</a>
         </div>
         <div>
           <h2>Legal</h2>
@@ -146,6 +161,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="/assets/lumo-music.js?v=b76e843706" data-slot=".nav-right .nav-menu" data-src="/assets/audio/outer-space-loop.mp3?v=75da4f5d" data-exclude="^/dashboard/" data-volume="0.16" data-fade="2.5" defer></script>
+  <script src="/assets/lumo-status.js?v=9b3c3795aa" defer></script>
   <script src="script.js?v=3b06cc299d" defer></script>
 </body>
 </html>

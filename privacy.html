@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3261aae6d4">
+  <link rel="stylesheet" href="styles.css?v=6504800a8f">
   <script>(function(d){var s="dark";try{s=localStorage.getItem("aeth-theme")||s}catch(e){}if(s!="light"&&s!="auto")s="dark";var h=d.documentElement;h.classList.add("js");h.setAttribute("data-theme-pref",s);h.setAttribute("data-theme",s=="auto"?(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"):s)})(document)</script>
   <script src="/assets/lumo-holiday.js?v=641148b99e"></script>
 </head>
@@ -87,7 +87,7 @@
           <li>When you talk to Lumo or speak to it in a voice channel, your words, images and audio are sent to xAI (the company behind Grok) to produce the answer.</li>
           <li>Lumo Coin wallets, activity stats (message counts, voice time, XP) and server settings are kept until they are deleted.</li>
           <li>Lumo does not record or save voice audio.</li>
-          <li>The bot never asks for or stores payment details. Premium is paid through PayPal, which shares your name, email, the amount and your note with me. The bot only keeps a small Premium record for each server.</li>
+          <li>The bot never asks for or stores payment details. Premium is paid through Ko-fi, which shares your name, email, the amount and any message with me. Ko-fi payment info such as your email is used only to deliver Premium and is stored hashed, never in plain text. The bot only keeps a small Premium record for each server.</li>
           <li>I don’t sell your data, use it for advertising, or train AI models on it.</li>
           <li>The server owner can run <code>/forgetme</code> to erase the saved messages, conversation memory and activity stats for their server. For anything else, message me on Discord and I will delete your data.</li>
         </ul>
@@ -113,7 +113,7 @@
 
       <section id="collect">
         <h2>1. What Lumo collects</h2>
-        <p>Lumo only works inside Discord servers. It does not ask for passwords, email addresses or payment details, and it has no login. Premium is paid for outside the bot, through PayPal (see <a href="#premium">Premium payments</a>).</p>
+        <p>Lumo only works inside Discord servers. It does not ask for passwords, email addresses or payment details, and it has no login. Premium is paid for outside the bot, through Ko-fi (see <a href="#premium">Premium payments</a>).</p>
 
         <h3>Messages in channels it can see</h3>
         <p>Lumo uses Discord’s message content access. In servers where the AI is active (servers with Premium, in channels the server has not switched off in the dashboard’s AI channels page), for each message posted in a channel it can read (whether or not the message is for Lumo) it keeps a short record: your Discord user ID and display name, the first 280 characters of the text, links in the message, links to attached or embedded images, and the time. It keeps its own replies the same way. This short-term history lets it follow a conversation and answer questions like “what were we just talking about?”. Servers without Premium, channels with the AI switched off, and direct messages get no such record. Each record is deleted after 3 days (sooner if the channel gets more than 150 newer messages), including records saved before a server’s Premium ended or a channel was switched off. If a message is deleted on Discord, its saved copy is deleted too, and if it is edited, the saved copy is updated. When asked about recent conversation, it may also save a short summary of the channel (up to 600 characters).</p>
@@ -176,20 +176,20 @@
           <li><strong>SoundCloud.</strong> When you use <code>/play</code> or ask for a song by voice, the song name or link is looked up on SoundCloud and the audio is streamed from there. Your identity is not sent. See the <a href="https://soundcloud.com/pages/privacy" target="_blank" rel="noopener">SoundCloud Privacy Policy</a>.</li>
           <li><strong>Open Trivia Database.</strong> Trivia in <code>/game</code> fetches questions from opentdb.com. No user data is sent.</li>
           <li><strong>Railway.</strong> Hosts the bot and its storage (see above).</li>
-          <li><strong>PayPal.</strong> Handles Premium payments (see <a href="#premium">Premium payments</a>). The bot itself sends nothing to PayPal.</li>
+          <li><strong>Ko-fi.</strong> Handles Premium payments (see <a href="#premium">Premium payments</a>). Ko-fi sends Lumo a notice of each payment; the bot itself sends nothing to Ko-fi.</li>
         </ul>
         <p>Outside these services, data is only shared if the law requires it.</p>
       </section>
 
       <section id="premium">
         <h2>5. Premium payments</h2>
-        <p>Lumo itself never asks for or stores payment details. Premium is paid for outside the bot, through PayPal.</p>
+        <p>Lumo itself never asks for or stores payment details. Premium is paid for outside the bot, as a membership on Ko-fi.</p>
         <ul>
-          <li><strong>When you pay.</strong> PayPal handles the payment. As the person being paid, I receive the details PayPal shares with payees, such as your name, email address, the amount, and any note you add. PayPal handles your payment information under the <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener">PayPal Privacy Statement</a>.</li>
-          <li><strong>Getting your code.</strong> To send you a redeem code, I see your Discord username and what you write in the DM you send me.</li>
-          <li><strong>What the bot stores.</strong> For each Premium server: the server ID, how Premium was granted (for example, a redeemed code), its status and expiry date, and, for redeemed codes, the user ID of the person who redeemed it and when. It also notes whether the renewal reminder and end notice were sent.</li>
+          <li><strong>When you pay.</strong> Ko-fi and its payment providers handle the payment. As the creator being paid, I receive the details Ko-fi shares with creators, such as your name, email address, the amount, and any message you add. Ko-fi handles your payment information under the <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi Privacy Policy</a>.</li>
+          <li><strong>Turning Premium on.</strong> Ko-fi sends Lumo a notice of each payment. Lumo uses your email (and your Discord user ID, if Ko-fi includes it, only to DM you a code) just to deliver Premium. It stores the email only as a salted hash, so it can’t be read back, plus a hashed transaction ID and the payment date. Your name, message and the amount are not stored. A payment nobody claims is forgotten after 60 days.</li>
+          <li><strong>What the bot stores.</strong> For each Premium server: the server ID, how Premium was granted (for example, a Ko-fi membership or a redeemed code), its status and expiry date, and the user ID of the person who claimed or redeemed it and when. For Ko-fi members, the hashed email is linked to the server so renewals extend it. It also notes whether the renewal reminder and end notice were sent.</li>
         </ul>
-        <p>This record is used only to run Premium: activating codes, sending the reminder 3 days before Premium ends and the notice when it ends (in the server’s system channel, or by DM to the person who last redeemed a code or to the server owner), and switching AI features off at expiry.</p>
+        <p>This record is used only to run Premium: activating payments and codes, sending the reminder 3 days before Premium ends and the notice when it ends (in the server’s system channel, or by DM to the person who last redeemed a code or to the server owner), and switching AI features off at expiry.</p>
       </section>
 
       <section id="retention">
@@ -207,7 +207,7 @@
               <tr><td>Lumo Coin wallets</td><td>Until deleted on request or the service shuts down.</td></tr>
               <tr><td>Activity stats (messages, voice time, XP)</td><td>Until deleted on request or the service shuts down.</td></tr>
               <tr><td>Premium records</td><td>Until deleted on request or the service shuts down. Records stay after Premium ends so renewals pick up where they left off.</td></tr>
-              <tr><td>Premium payment details</td><td>Held by PayPal under its policies, and in my PayPal account’s transaction history. The bot does not store them.</td></tr>
+              <tr><td>Premium payment details</td><td>Held by Ko-fi and its payment providers under their policies, and in my Ko-fi account’s history. The bot keeps only a hashed email, a hashed transaction ID and the payment date: up to 60 days if a payment is never claimed, otherwise about 13 months, so a payment is never counted twice.</td></tr>
               <tr><td>Monthly generation counter</td><td>The current month only. Older months are removed.</td></tr>
               <tr><td>Daily AI reply counters</td><td>Per server and per day, kept for 45 days, then removed. The per-person count (per server, today only) is cleared when the day changes.</td></tr>
               <tr><td>Per-person image counter</td><td>The current month only. Older months are removed.</td></tr>
@@ -231,7 +231,7 @@
           <li>Don’t use <code>/voice</code> (to join) or <code>/play</code> if you don’t want your speech transcribed.</li>
           <li>Server administrators can use Discord permissions to keep Lumo out of specific channels, or remove it from the server.</li>
         </ul>
-        <p>Data held by Discord, xAI or PayPal has to be requested from them directly.</p>
+        <p>Data held by Discord, xAI or Ko-fi has to be requested from them directly.</p>
       </section>
 
       <section id="children">
@@ -284,7 +284,7 @@
           <h2>Support</h2>
           <a href="https://discord.gg/KZjebts36C" target="_blank" rel="noopener">Join our support server</a>
           <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message Ori on Discord</a>
-          <a href="faq.html#redeem">Redeem a code</a>
+          <a href="faq.html#claim">Claim Premium</a>
           <a href="faq.html#permissions">Permissions explained</a>
           <a href="status.html">Status</a>
         </div>

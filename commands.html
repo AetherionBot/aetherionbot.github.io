@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3261aae6d4">
+  <link rel="stylesheet" href="styles.css?v=6504800a8f">
   <script>(function(d){var s="dark";try{s=localStorage.getItem("aeth-theme")||s}catch(e){}if(s!="light"&&s!="auto")s="dark";var h=d.documentElement;h.classList.add("js");h.setAttribute("data-theme-pref",s);h.setAttribute("data-theme",s=="auto"?(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"):s)})(document)</script>
   <script src="/assets/lumo-holiday.js?v=641148b99e"></script>
 </head>
@@ -225,9 +225,13 @@
   <p>Make a bait channel. A post there is deleted and logged. Administrators only. Starts as log only. Admins and Manage Server are left alone, and so are other bots.</p><ul class="args"><li><code class="arg">action</code><span>What a post in the bait channel does: log only, timeout, kick, softban, or off</span></li><li><code class="arg">channel</code><span>Use this channel instead of making #void</span></li><li><code class="arg">timeout_minutes</code><span>Timeout length, 1 to 10080 minutes. Only used when action is timeout</span></li></ul>
 </article>
 </div></section>
-<section class="cmd-group" data-group="premium"><h2><span aria-hidden="true">✦</span> Premium <small>2</small></h2><div class="cmd-grid"><article class="cmd" data-cat="premium" data-search="/premium status show this server&#x27;s premium status and how to upgrade. shows this server’s plan and when it ends. on a premium server it also shows ai replies used today and images and videos used this month, with when each resets.">
+<section class="cmd-group" data-group="premium"><h2><span aria-hidden="true">✦</span> Premium <small>3</small></h2><div class="cmd-grid"><article class="cmd" data-cat="premium" data-search="/premium status show this server&#x27;s premium status and how to upgrade. shows this server’s plan and when it ends. on a premium server it also shows ai replies used today and images and videos used this month, with when each resets.">
   <header><button class="cmd-name" type="button" data-copy="/premium status" title="Copy">/premium status</button><span class="badges"><span class="badge b-any">Anyone</span></span></header>
   <p>Show this server&#x27;s Premium status and how to upgrade. Shows this server’s plan and when it ends. On a Premium server it also shows AI replies used today and images and videos used this month, with when each resets.</p>
+</article>
+<article class="cmd" data-cat="premium" data-search="/premium claim activate your ko-fi lumo premium payment for this server. administrators only. use the email you paid with, or the transaction id from your ko-fi receipt. later renewals extend the same server by themselves. paid_with the email you paid with on ko-fi, or the transaction id from your receipt">
+  <header><button class="cmd-name" type="button" data-copy="/premium claim" title="Copy">/premium claim</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
+  <p>Activate your Ko-fi Lumo Premium payment for this server. Administrators only. Use the email you paid with, or the transaction ID from your Ko-fi receipt. Later renewals extend the same server by themselves.</p><ul class="args"><li><code class="arg req">paid_with</code><span>The email you paid with on Ko-fi, or the transaction ID from your receipt</span></li></ul>
 </article>
 <article class="cmd" data-cat="premium" data-search="/premium redeem redeem an lumo premium code for this server. administrators only. code your code, like aeth-xxxx-xxxx">
   <header><button class="cmd-name" type="button" data-copy="/premium redeem" title="Copy">/premium redeem</button><span class="badges"><span class="badge b-admin">Admin</span></span></header>
@@ -262,7 +266,7 @@
           <h2>Support</h2>
           <a href="https://discord.gg/KZjebts36C" target="_blank" rel="noopener">Join our support server</a>
           <a href="https://discord.com/users/1022200760018161684" target="_blank" rel="noopener">Message Ori on Discord</a>
-          <a href="faq.html#redeem">Redeem a code</a>
+          <a href="faq.html#claim">Claim Premium</a>
           <a href="faq.html#permissions">Permissions explained</a>
           <a href="status.html">Status</a>
         </div>
